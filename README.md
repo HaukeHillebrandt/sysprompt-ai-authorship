@@ -32,7 +32,9 @@ OpenAI's deployed system prompts is AI-authored, June 2024 to September 2026.
   Anthropic's self-reports; weak evidence about recursive self-improvement in the sense of accelerating returns to AI
   research (system prompts are deployment configuration, and one step is not a feedback loop).
 
-Figures: [`paper/figs/`](paper/figs) (Figure 1: AI share of newly written prompt text over time).
+![Frontier labs' system prompts are now mostly AI-written](paper/figs/fig_main.png)
+
+More figures: [`paper/figs/`](paper/figs).
 
 ## Method in brief
 
@@ -72,7 +74,7 @@ standalone HTML write-up with interactive charts (Anthropic only).
 | `sample_openai*.py` | systematic samples of the two largest OpenAI 2026 files |
 | `segs*.tsv` | Pangram segment labels (label, confidence, words, opening characters) |
 | `analyze.py`, `analyze_openai.py` | segment→line mapping, section analysis, stock attribution |
-| `stats.py`, `make_figures.py`, `make_tables.py`, `export_plot_data.py` | statistics, figures and tables for the paper |
+| `stats.py`, `make_figures.py`, `make_main_figure.py`, `make_tables.py`, `export_plot_data.py` | statistics, figures and tables |
 | `qual_extract.py` | extracts human-labelled passages for the qualitative analysis (output not redistributed) |
 | `results/` | numeric outputs |
 | `paper/` | LaTeX source, bibliography, figures, PDF |

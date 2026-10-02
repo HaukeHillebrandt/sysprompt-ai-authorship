@@ -43,7 +43,7 @@ def fig1():
     ax.text(D("2026-04-10"), 70, "Opus 4.7", fontsize=6.5, color=AC, ha="right")
     ax.axvline(D("2026-04-16"), color="#999", lw=0.5, ls=":")
     ax.set_ylim(-4, 106); ax.set_xlim(D("2024-05-15"), D("2026-10-20"))
-    ax.set_ylabel("AI share of newly written text (%)")
+    ax.set_ylabel("AI share of new system-prompt text (%)")
     ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[1, 4, 7, 10])); ax.xaxis.set_major_formatter(mdates.DateFormatter("%b\n%Y"))
     h = [plt.Line2D([], [], marker="o", ls="", color=AC, label="Anthropic, claude.ai"),
          plt.Line2D([], [], marker="o", ls="", color="#e07aa5", label="Anthropic, other products"),
