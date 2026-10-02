@@ -1,0 +1,20 @@
+# Third-party text (leaked and official system prompts) and files derived verbatim from it are not redistributed.
+# Recreate with ./fetch_data.sh and the prep scripts.
+CL4R1T4S/
+official/
+newtext/
+newtext_openai/
+upload/
+upload_openai/
+calib/
+results/openai_labelled_lines.json
+results/qual_human_passages.md
+
+# Build artefacts
+paper/arxiv/
+paper/arxiv_submission.zip
+paper/*.aux
+paper/*.out
+paper/*.log
+__pycache__/
+.DS_Store

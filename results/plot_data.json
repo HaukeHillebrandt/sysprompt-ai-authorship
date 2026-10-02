@@ -1,0 +1,732 @@
+{
+ "leaks": [
+  {
+   "n": 0,
+   "model": "Sonnet 3.5",
+   "date": "2024-06-20",
+   "surface": "claude.ai",
+   "new_words": 3509,
+   "ai_new": 51,
+   "em_share_new": 1.0,
+   "em_per10k_new": 2.8,
+   "prompt_words": 3429,
+   "stock": {
+    "words": 3429,
+    "ai": 49,
+    "human": 51,
+    "unknown": 0
+   }
+  },
+  {
+   "n": 1,
+   "model": "Claude Code",
+   "date": "2025-03-04",
+   "surface": "Claude Code",
+   "new_words": 260,
+   "ai_new": 100,
+   "em_share_new": null,
+   "em_per10k_new": 0.0,
+   "prompt_words": 252,
+   "stock": {
+    "words": 252,
+    "ai": 100,
+    "human": 0,
+    "unknown": 0
+   }
+  },
+  {
+   "n": 2,
+   "model": "User styles",
+   "date": "2025-04-20",
+   "surface": "claude.ai styles",
+   "new_words": 566,
+   "ai_new": 65,
+   "em_share_new": null,
+   "em_per10k_new": 0.0,
+   "prompt_words": 566,
+   "stock": {
+    "words": 566,
+    "ai": 56,
+    "human": 44,
+    "unknown": 0
+   }
+  },
+  {
+   "n": 3,
+   "model": "Sonnet 3.7",
+   "date": "2025-05-16",
+   "surface": "claude.ai",
+   "new_words": 6772,
+   "ai_new": 28,
+   "em_share_new": 0.062,
+   "em_per10k_new": 1.5,
+   "prompt_words": 9136,
+   "stock": {
+    "words": 9136,
+    "ai": 19,
+    "human": 61,
+    "unknown": 20
+   }
+  },
+  {
+   "n": 4,
+   "model": "Claude 4",
+   "date": "2025-05-22",
+   "surface": "claude.ai",
+   "new_words": 6798,
+   "ai_new": 51,
+   "em_share_new": 0.08,
+   "em_per10k_new": 2.9,
+   "prompt_words": 9517,
+   "stock": {
+    "words": 9517,
+    "ai": 39,
+    "human": 54,
+    "unknown": 8
+   }
+  },
+  {
+   "n": 5,
+   "model": "Opus 4.1*",
+   "date": "2025-08-05",
+   "surface": "claude.ai (reconstruction)",
+   "new_words": 433,
+   "ai_new": 33,
+   "em_share_new": null,
+   "em_per10k_new": 0.0,
+   "prompt_words": 8715,
+   "stock": {
+    "words": 8715,
+    "ai": 26,
+    "human": 54,
+    "unknown": 20
+   }
+  },
+  {
+   "n": 6,
+   "model": "Sonnet 4.5",
+   "date": "2025-09-29",
+   "surface": "claude.ai",
+   "new_words": 4980,
+   "ai_new": 56,
+   "em_share_new": 0.0,
+   "em_per10k_new": 0.0,
+   "prompt_words": 12401,
+   "stock": {
+    "words": 12401,
+    "ai": 38,
+    "human": 48,
+    "unknown": 14
+   }
+  },
+  {
+   "n": 7,
+   "model": "Opus 4.5",
+   "date": "2025-11-24",
+   "surface": "claude.ai",
+   "new_words": 7743,
+   "ai_new": 42,
+   "em_share_new": 0.325,
+   "em_per10k_new": 16.8,
+   "prompt_words": 11951,
+   "stock": {
+    "words": 11951,
+    "ai": 37,
+    "human": 50,
+    "unknown": 13
+   }
+  },
+  {
+   "n": 8,
+   "model": "Opus 4.6",
+   "date": "2026-02-06",
+   "surface": "claude.ai",
+   "new_words": 6682,
+   "ai_new": 50,
+   "em_share_new": 0.385,
+   "em_per10k_new": 15.0,
+   "prompt_words": 12505,
+   "stock": {
+    "words": 12505,
+    "ai": 36,
+    "human": 48,
+    "unknown": 16
+   }
+  },
+  {
+   "n": 9,
+   "model": "Opus 4.7",
+   "date": "2026-04-16",
+   "surface": "claude.ai",
+   "new_words": 9154,
+   "ai_new": 79,
+   "em_share_new": 0.883,
+   "em_per10k_new": 90.7,
+   "prompt_words": 19174,
+   "stock": {
+    "words": 19174,
+    "ai": 57,
+    "human": 33,
+    "unknown": 10
+   }
+  },
+  {
+   "n": 10,
+   "model": "Claude Design",
+   "date": "2026-04-17",
+   "surface": "Claude Design",
+   "new_words": 9390,
+   "ai_new": 74,
+   "em_share_new": 1.0,
+   "em_per10k_new": 112.9,
+   "prompt_words": 9462,
+   "stock": {
+    "words": 9462,
+    "ai": 71,
+    "human": 29,
+    "unknown": 0
+   }
+  },
+  {
+   "n": 11,
+   "model": "Fable 5",
+   "date": "2026-06-09",
+   "surface": "claude.ai",
+   "new_words": 5321,
+   "ai_new": 83,
+   "em_share_new": 0.905,
+   "em_per10k_new": 107.1,
+   "prompt_words": 15448,
+   "stock": {
+    "words": 15448,
+    "ai": 58,
+    "human": 30,
+    "unknown": 12
+   }
+  },
+  {
+   "n": 12,
+   "model": "Opus 5",
+   "date": "2026-07-24",
+   "surface": "claude.ai",
+   "new_words": 14053,
+   "ai_new": 92,
+   "em_share_new": 0.943,
+   "em_per10k_new": 142.3,
+   "prompt_words": 26381,
+   "stock": {
+    "words": 26381,
+    "ai": 78,
+    "human": 16,
+    "unknown": 6
+   }
+  },
+  {
+   "n": 13,
+   "model": "Fable 5.1",
+   "date": "2026-09-01",
+   "surface": "claude.ai",
+   "new_words": 11989,
+   "ai_new": 95,
+   "em_share_new": 0.97,
+   "em_per10k_new": 136.8,
+   "prompt_words": 36478,
+   "stock": {
+    "words": 36478,
+    "ai": 80,
+    "human": 15,
+    "unknown": 5
+   }
+  },
+  {
+   "n": 14,
+   "model": "Opus 5.5 (agent app)",
+   "date": "2026-09-22",
+   "surface": "agent app session",
+   "new_words": 26296,
+   "ai_new": 91,
+   "em_share_new": 0.956,
+   "em_per10k_new": 106.9,
+   "prompt_words": 35287,
+   "stock": {
+    "words": 35287,
+    "ai": 81,
+    "human": 13,
+    "unknown": 5
+   }
+  }
+ ],
+ "extra": [
+  {
+   "model": "Opus 5.5 skill instructions",
+   "date": "2026-09-22",
+   "ai_new": 100,
+   "new_words": 13919
+  },
+  {
+   "model": "Opus 5.5 reference files (sample)",
+   "date": "2026-09-22",
+   "ai_new": 99,
+   "new_words": 7214
+  }
+ ],
+ "sections": {
+  "categories": [
+   "Safety policy",
+   "Product & identity",
+   "Style & behaviour",
+   "Tools & features"
+  ],
+  "eras": {
+   "2024-06..2026-02": [
+    {
+     "ai": 46,
+     "n": 3650
+    },
+    {
+     "ai": 0,
+     "n": 1728
+    },
+    {
+     "ai": 11,
+     "n": 2558
+    },
+    {
+     "ai": 46,
+     "n": 28811
+    }
+   ],
+   "2026-04..2026-09": [
+    {
+     "ai": 82,
+     "n": 7941
+    },
+    {
+     "ai": 47,
+     "n": 1741
+    },
+    {
+     "ai": 81,
+     "n": 4680
+    },
+    {
+     "ai": 88,
+     "n": 60167
+    }
+   ]
+  }
+ },
+ "releases": [
+  {
+   "model": "claude-haiku-3",
+   "date": "2024-07-12",
+   "gap": null
+  },
+  {
+   "model": "claude-opus-3",
+   "date": "2024-07-12",
+   "gap": 0
+  },
+  {
+   "model": "claude-sonnet-3-5",
+   "date": "2024-07-12",
+   "gap": 0
+  },
+  {
+   "model": "claude-haiku-3-5",
+   "date": "2024-10-22",
+   "gap": 102
+  },
+  {
+   "model": "claude-sonnet-3-7",
+   "date": "2025-02-24",
+   "gap": 125
+  },
+  {
+   "model": "claude-opus-4",
+   "date": "2025-05-22",
+   "gap": 87
+  },
+  {
+   "model": "claude-sonnet-4",
+   "date": "2025-05-22",
+   "gap": 0
+  },
+  {
+   "model": "claude-opus-4-1",
+   "date": "2025-08-05",
+   "gap": 75
+  },
+  {
+   "model": "claude-sonnet-4-5",
+   "date": "2025-09-29",
+   "gap": 55
+  },
+  {
+   "model": "claude-haiku-4-5",
+   "date": "2025-10-15",
+   "gap": 16
+  },
+  {
+   "model": "claude-opus-4-5",
+   "date": "2025-11-24",
+   "gap": 40
+  },
+  {
+   "model": "claude-opus-4-6",
+   "date": "2026-02-05",
+   "gap": 73
+  },
+  {
+   "model": "claude-sonnet-4-6",
+   "date": "2026-02-17",
+   "gap": 12
+  },
+  {
+   "model": "claude-opus-4-7",
+   "date": "2026-04-16",
+   "gap": 58
+  },
+  {
+   "model": "claude-opus-4-8",
+   "date": "2026-05-28",
+   "gap": 42
+  },
+  {
+   "model": "claude-fable-5",
+   "date": "2026-06-09",
+   "gap": 12
+  },
+  {
+   "model": "claude-sonnet-5",
+   "date": "2026-06-30",
+   "gap": 21
+  },
+  {
+   "model": "claude-opus-5",
+   "date": "2026-07-24",
+   "gap": 24
+  },
+  {
+   "model": "claude-fable-5-1",
+   "date": "2026-09-01",
+   "gap": 39
+  },
+  {
+   "model": "claude-opus-5-5",
+   "date": "2026-09-22",
+   "gap": 21
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "date": "2026-09-28",
+   "gap": 6
+  }
+ ],
+ "official_quarterly": [
+  {
+   "quarter": "2024-Q3",
+   "new_words": 1372,
+   "updates": 4
+  },
+  {
+   "quarter": "2024-Q4",
+   "new_words": 4059,
+   "updates": 3
+  },
+  {
+   "quarter": "2025-Q1",
+   "new_words": 1000,
+   "updates": 1
+  },
+  {
+   "quarter": "2025-Q2",
+   "new_words": 998,
+   "updates": 2
+  },
+  {
+   "quarter": "2025-Q3",
+   "new_words": 1792,
+   "updates": 6
+  },
+  {
+   "quarter": "2025-Q4",
+   "new_words": 1601,
+   "updates": 4
+  },
+  {
+   "quarter": "2026-Q1",
+   "new_words": 1350,
+   "updates": 5
+  },
+  {
+   "quarter": "2026-Q2",
+   "new_words": 5980,
+   "updates": 4
+  },
+  {
+   "quarter": "2026-Q3",
+   "new_words": 2557,
+   "updates": 4
+  }
+ ],
+ "official_emdash": [
+  {
+   "date": "2024-07-12",
+   "model": "claude-haiku-3",
+   "new_words": 114,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2024-07-12",
+   "model": "claude-opus-3",
+   "new_words": 278,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2024-07-12",
+   "model": "claude-sonnet-3-5",
+   "new_words": 944,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2024-10-22",
+   "model": "claude-haiku-3-5",
+   "new_words": 2887,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2024-10-22",
+   "model": "claude-sonnet-3-5",
+   "new_words": 978,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2024-11-22",
+   "model": "claude-sonnet-3-5",
+   "new_words": 194,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2025-02-24",
+   "model": "claude-sonnet-3-7",
+   "new_words": 1000,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2025-05-22",
+   "model": "claude-opus-4",
+   "new_words": 987,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2025-07-31",
+   "model": "claude-opus-4",
+   "new_words": 923,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2025-08-05",
+   "model": "claude-opus-4-1",
+   "new_words": 502,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2025-09-29",
+   "model": "claude-sonnet-4-5",
+   "new_words": 367,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2025-10-15",
+   "model": "claude-haiku-4-5",
+   "new_words": 69,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2025-11-19",
+   "model": "claude-haiku-4-5",
+   "new_words": 1081,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2025-11-24",
+   "model": "claude-opus-4-5",
+   "new_words": 451,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2026-01-18",
+   "model": "claude-haiku-4-5",
+   "new_words": 351,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2026-01-18",
+   "model": "claude-opus-4-5",
+   "new_words": 126,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2026-02-05",
+   "model": "claude-opus-4-6",
+   "new_words": 446,
+   "em_per10k": 0.0,
+   "em_share": null
+  },
+  {
+   "date": "2026-02-17",
+   "model": "claude-sonnet-4-6",
+   "new_words": 427,
+   "em_per10k": 0.0,
+   "em_share": 0.0
+  },
+  {
+   "date": "2026-04-16",
+   "model": "claude-opus-4-7",
+   "new_words": 1267,
+   "em_per10k": 71.0,
+   "em_share": 0.6
+  },
+  {
+   "date": "2026-05-28",
+   "model": "claude-opus-4-8",
+   "new_words": 2348,
+   "em_per10k": 8.5,
+   "em_share": 1.0
+  },
+  {
+   "date": "2026-06-09",
+   "model": "claude-fable-5",
+   "new_words": 1029,
+   "em_per10k": 58.3,
+   "em_share": 1.0
+  },
+  {
+   "date": "2026-06-30",
+   "model": "claude-sonnet-5",
+   "new_words": 1336,
+   "em_per10k": 89.8,
+   "em_share": 1.0
+  },
+  {
+   "date": "2026-07-24",
+   "model": "claude-opus-5",
+   "new_words": 655,
+   "em_per10k": 45.8,
+   "em_share": 1.0
+  },
+  {
+   "date": "2026-09-01",
+   "model": "claude-fable-5-1",
+   "new_words": 1279,
+   "em_per10k": 62.5,
+   "em_share": 1.0
+  },
+  {
+   "date": "2026-09-22",
+   "model": "claude-opus-5-5",
+   "new_words": 530,
+   "em_per10k": 37.7,
+   "em_share": 1.0
+  },
+  {
+   "date": "2026-09-28",
+   "model": "claude-sonnet-5-5",
+   "new_words": 93,
+   "em_per10k": 0.0,
+   "em_share": null
+  }
+ ],
+ "official_pangram_full": [
+  {
+   "date": "2024-07-12",
+   "model": "Sonnet 3.5",
+   "ai": 8
+  },
+  {
+   "date": "2024-10-22",
+   "model": "Sonnet 3.5",
+   "ai": 14
+  },
+  {
+   "date": "2026-02-17",
+   "model": "Sonnet 4.6",
+   "ai": 11
+  },
+  {
+   "date": "2026-04-16",
+   "model": "Opus 4.7",
+   "ai": 21
+  },
+  {
+   "date": "2026-09-22",
+   "model": "Opus 5.5",
+   "ai": 66
+  }
+ ],
+ "controls": [
+  {
+   "name": "Anthropic constitution post, May 2023 (human)",
+   "ai": 0
+  },
+  {
+   "name": "Claude rewrite of 2024 prompt",
+   "ai": 100
+  },
+  {
+   "name": "Claude rewrite of 2024 excerpt",
+   "ai": 100
+  },
+  {
+   "name": "Claude rewrite of Claude 4 section",
+   "ai": 91
+  },
+  {
+   "name": "Claude rewrite of tool description",
+   "ai": 100
+  },
+  {
+   "name": "Light Claude edit of human text (~1/4 sentences)",
+   "ai": 43
+  }
+ ],
+ "self_reports": [
+  {
+   "date": "2025-01-15",
+   "series": "AI share of approved code (Anthropic)",
+   "value": 3
+  },
+  {
+   "date": "2026-05-15",
+   "series": "AI share of approved code (Anthropic)",
+   "value": 80
+  },
+  {
+   "date": "2026-03-15",
+   "series": "R&D work completed autonomously (Anthropic)",
+   "value": 1
+  },
+  {
+   "date": "2026-08-15",
+   "series": "R&D work completed autonomously (Anthropic)",
+   "value": 26
+  }
+ ]
+}

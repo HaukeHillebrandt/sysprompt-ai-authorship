@@ -1,0 +1,41 @@
+### A. OpenAI: AI share of first-appearance text
+
+key                           date       surface            new w scored w    AI     segs
+00_GPT_4.5                    2025-02-27 ChatGPT             1298     1298   35%    6/6  
+01_o3_o4_mini                 2025-04-16 ChatGPT             1900     1900   31%    7/7  
+02_GPT_4o_Apr                 2025-04-25 ChatGPT              679      679    5%    3/3  
+03_Personality_v2             2025-04-28 ChatGPT               82       82    0%    1/1  
+04_GPT_4.1                    2025-05-15 ChatGPT              176      176    0%    1/1  
+05_Codex_cloud                2025-05-27 Codex                951      951    0%    1/1  
+06_GPT_5                      2025-08-07 ChatGPT             3103     3103   40%    5/5  
+07_Codex_Sep                  2025-09-15 Codex               1051     1051    3%    3/3  
+08_GPT_4o_Sep                 2025-09-27 ChatGPT              217      217    0%    1/1  
+09_ChatKit_Studio             2025-10-06 ChatKit Studio      7796     7796   20%   19/19 
+10_Atlas                      2025-10-21 Atlas browser       2649     2649   25%   10/10 
+11_GPT_5.6_Sol_Codex_app      2026-07-14 Codex Desktop      62114    62114   93%   92/92 
+12_GPT_6_Astra_Codex_app      2026-09-09 Codex Desktop      81741    56173   95%   84/84 
+13_GPT_6_Sol_Codex_app        2026-09-22 Codex Desktop       3043     3043   94%    3/3  
+
+### B. AI share of new text by section type and era
+
+era              safety policy      product/identity       style/behaviour        tools/features
+2025             29% (n=   528)         49% (n=   156)         28% (n=   561)         21% (n= 18177)
+2026             96% (n=  8001)         50% (n=    16)         95% (n=  7946)         92% (n=102111)
+
+### C. Stock view: measured labels; text never scored is imputed at the rate of the prompt set where it first appeared
+
+key                              words     AI  Human  AI est.  Hum est.  AI total
+00_GPT_4.5                        1271    34%    66%       0%        0%       34%
+01_o3_o4_mini                     1955    33%    66%       0%        1%       33%
+02_GPT_4o_Apr                     1246    15%    85%       0%        0%       15%
+03_Personality_v2                  183     0%   100%       0%        0%        0%
+04_GPT_4.1                        1326    12%    87%       0%        1%       12%
+05_Codex_cloud                     948     1%    99%       0%        0%        1%
+06_GPT_5                          3831    31%    69%       0%        0%       31%
+07_Codex_Sep                      1791     3%    97%       0%        0%        3%
+08_GPT_4o_Sep                     1270    20%    77%       0%        3%       20%
+09_ChatKit_Studio                 7597    21%    79%       0%        0%       21%
+10_Atlas                          4808    18%    82%       0%        0%       18%
+11_GPT_5.6_Sol_Codex_app         59983    93%     7%       0%        0%       93%
+12_GPT_6_Astra_Codex_app        115905    72%    17%      10%        1%       82%
+13_GPT_6_Sol_Codex_app           30075    72%    10%      17%        1%       89%

@@ -1,0 +1,45 @@
+### A. AI share of first-appearance (newly written) text
+
+leak                                  date       surface                     new words Pangram AI line-mapped  segs located
+00_Claude_Sonnet_3.5                  2024-06-20 claude.ai                        3509        51%        50%       6/6    
+01_Claude_Code_03-04-24               2025-03-04 Claude Code                       260       100%       100%       1/1    
+02_UserStyle_Modes                    2025-04-20 claude.ai styles                  566        65%        56%       4/4    
+03_Claude_Sonnet_3.7_New              2025-05-16 claude.ai                        6772        28%        23%      21/21   
+04_Claude_4                           2025-05-22 claude.ai                        6798        51%        45%      12/12   
+05_Claude-4.1                         2025-08-05 claude.ai (reconstruction)        433        33%        32%       3/3    
+06_Claude_Sonnet-4.5_Sep-29-2025      2025-09-29 claude.ai                        4980        56%        53%       9/9    
+07_Claude-4.5-Opus                    2025-11-24 claude.ai                        7743        42%        40%      26/26   
+08_Claude_Opus_4.6                    2026-02-06 claude.ai                        6682        50%        47%      17/17   
+09_Claude-Opus-4.7                    2026-04-16 claude.ai                        9154        79%        79%      29/29   
+10_Claude-Design-Sys-Prompt           2026-04-17 Claude Design                    9390        74%        73%      31/31   
+11_CLAUDE-FABLE-5                     2026-06-09 claude.ai                        5321        83%        83%      18/18   
+12_OPUS-5                             2026-07-24 claude.ai                       14053        92%        92%      19/19   
+13_Claude-Fable-5.1                   2026-09-01 claude.ai                       11989        95%        95%      10/10   
+14_CLAUDE-OPUS-5.5                    2026-09-22 agent app session               26296        91%        87%      35/35   
+14_CLAUDE-OPUS-5.5__skills                                                                   100%
+14_CLAUDE-OPUS-5.5__artifact_refs_SAMPLE                                                      99%
+
+### B. AI share of new text by section type and era (line-mapped, word-weighted)
+
+era                          safety policy      product/identity       style/behaviour        tools/features
+2024-06..2026-02             46% (n=  3650)          0% (n=  1728)         11% (n=  2558)         46% (n= 28811)
+2026-04..2026-09             82% (n=  7941)         47% (n=  1741)         81% (n=  4680)         88% (n= 60167)
+
+### C. Stock view: share of each full leaked prompt that was AI-written at first appearance
+
+leak                                     words     AI  Human  unknown
+00_Claude_Sonnet_3.5                      3429    49%    51%       0%
+01_Claude_Code_03-04-24                    252   100%     0%       0%
+02_UserStyle_Modes                         566    56%    44%       0%
+03_Claude_Sonnet_3.7_New                  9136    19%    61%      20%
+04_Claude_4                               9517    39%    54%       8%
+05_Claude-4.1                             8715    26%    54%      20%
+06_Claude_Sonnet-4.5_Sep-29-2025         12401    38%    48%      14%
+07_Claude-4.5-Opus                       11951    37%    50%      13%
+08_Claude_Opus_4.6                       12505    36%    48%      16%
+09_Claude-Opus-4.7                       19174    57%    33%      10%
+10_Claude-Design-Sys-Prompt               9462    71%    29%       0%
+11_CLAUDE-FABLE-5                        15448    58%    30%      12%
+12_OPUS-5                                26381    78%    16%       6%
+13_Claude-Fable-5.1                      36478    80%    15%       5%
+14_CLAUDE-OPUS-5.5                       35287    81%    13%       5%

@@ -1,0 +1,77 @@
+11|Ah|1528|You are Codex, an agent based
+11|Ah|1404|- This app supports recurring
+11|Ah|1272|Note that collaboration tools
+11|Ah|1328|8. For general docs lookup, st
+11|Ah|1218|Composition/framing: wide/clos
+11|Ah|242|High freedom (text-based instr
+11|Hh|92|SKILL.md body - When skill tri
+11|Ah|446|Key principle: When a skill su
+11|Hh|365|Step 1: Understanding the Skil
+11|Ah|99|- Include all when to use info
+11|Hh|80|Write instructions for using t
+11|Ah|53|User testing often this happen
+11|Hh|52|Forward-test if it is reasonab
+11|Ah|1410|Prompts to subagents should lo
+11|Ah|719|Baseline geometry for all pres
+11|Hh|39|- Tables: Please invest signif
+11|Ah|1071|- Set deliberate table/cell wi
+11|Ah|1461|For read-only Q A, inspect the
+11|Ah|1376|Do not edit manifests, copy in
+11|Ah|1438|description: Use Sites to buil
+11|Ah|1397|description: Create, edit, ana
+11|Ah|1387|- A visible ChatGPT button on
+11|Ah|1402|Use the Node path returned by
+11|Ah|638|- .form-range : Pair a native
+11|Hh|227|exec tool declaration: Tools p
+11|Ah|1222|Defaults to 10000 tokens large
+11|Ah|1441|Deploy a saved site version to
+11|Ah|1430|Opaque site project ID. Pass t
+11|Ah|121|Do not mark a goal complete me
+11|Hh|35|How long to sleep in milliseco
+11|Ah|161|Tools for spawning and managin
+11|Hh|198|Relative or canonical task nam
+11|Ah|485|Optional number of turns to fo
+11|Hh|236|Identifier of the running exec
+11|Ah|19|- This supports xdotool's key
+11|Hh|47|App name, full app path, or un
+11|Ah|820|Fractional values are supporte
+11|Hh|210|Whether the thread should be a
+11|Ah|64|Provide text exactly as it app
+11|Hm|102|Optional text immediately afte
+11|Ah|586|- This supports xdotool's key
+11|Hh|48|- Control the in-app browser i
+11|Ah|547|Run JavaScript in a persistent
+11|Hh|573|search query must have length
+11|Ah|1422|Move another Codex thread and
+12|Ah|291|Use cron only when the user ex
+12|Hh|47|Navigate the most recently foc
+12|Ah|1536|Use when the user asks for con
+12|Ah|1319|- Before any recursive delete
+12|Ah|1547|IMPORTANT: DO NOT call this to
+12|Ah|1501|- Delegated subtasks must mate
+12|Ah|1538|No picker-visible model overri
+12|Ah|1516|Reasoning effort override for
+12|Ah|1519|Model override for the new age
+12|Ah|402|User-facing nickname for the s
+12|Hh|78|List private model-only notes
+12|Ah|185|Reads, listings, searches, and
+12|Hm|111|IMPORTANT: When deserializing
+12|Ah|1451|You speak warmly and candidly,
+12|Ah|1364|- Assess the full exfiltration
+12|Ah|1402|You work in 3 phases, and you
+12|Ah|410|Follow the Workspace Policy. I
+12|Hh|63|- Only use it for more complex
+12|Ah|31|- If sub-agents are running, w
+12|Hh|218|- When you ask sub-agent to do
+12|Ah|1443|In such cases, you must tell t
+12|Hh|49|Coding-Agent Restrictions - Th
+12|Ah|1317|- The coding-agent may have a
+12|Ah|1361|- In each block, preserve the
+12|Ah|369|- near-verbatim instructions t
+12|Hh|60|In this repo, rg doesn't work
+12|Ah|1474|The agent should first lay out
+12|Ah|728|Talk like a trusted collaborat
+12|Hh|145|The code location should overl
+12|Ah|52|How you work Your default pers
+12|Hh|77|AGENTS.md spec - Repos often c
+12|Ah|769|Preamble messages Before makin

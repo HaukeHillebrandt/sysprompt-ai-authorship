@@ -1,0 +1,242 @@
+0|Hh|1474|Claude-3.5-Sonnet System Promp
+0|Ah|88|This identifier will be used c
+0|Hh|128|Do not use triple backticks wh
+0|Ah|183|If the assistant is unable to
+0|Hh|170|import useState from react The
+0|Ah|1564|Don't use // rest of the code
+1|Ah|234|Claude Code System Instruction
+2|Ah|271|Anthropic UserStyle Modes Here
+2|Hh|72|Claude writes prose and in ful
+2|Ah|95|Claude provides answers to que
+2|Hh|132|For code, artifacts, written c
+3|Hh|619|Complete Claude 3.7 Sonnet Sys
+3|Ah|60|Content intended for eventual
+3|Hh|215|A standalone text-heavy markdo
+3|Ah|171|This means: When applying styl
+3|Hh|663|The lucide-react 0.263.1 libra
+3|Ah|77|Use Papaparse with options lik
+3|Hh|132|THIS IS VERY IMPORTANT: If you
+3|Ah|59|If there are many updates need
+3|Hh|98|/artifact instructions The ass
+3|Ah|31|You should create an artifact
+3|Hh|753|/artifacts info search instruc
+3|Ah|386|Unifying features: Information
+3|Hh|229|Searches for a single object/t
+3|Ah|282|Research query examples (from
+3|Hh|830|given this, what of companies
+3|Ah|649|or good locations for X near m
+3|Hh|470|/harmful content safety If the
+3|Ah|54|Refuse or redirect harmful req
+3|Hh|1026|For very complex queries, Clau
+3|Am|69|E.g., you can write import Pap
+3|Hh|108|- Pretty-print several sample
+4|Hh|1522|This iteration of Claude is Cl
+4|Hh|1522|This iteration of Claude is Cl
+4|Ah|1484|Any summaries must be much sho
+4|Hh|454|Only ever use very short quote
+4|Ah|1059|Creative writing of any length
+4|Hh|90|Use analysis only for MUCH har
+4|Ah|40|For data visualizations: Creat
+4|Hh|202|DEFAULT: Most tasks do not nee
+4|Ah|95|Always use correct React style
+4|Hh|86|This is a browser environment,
+4|Ah|50|Parse CSVs with Papaparse usin
+4|Hh|64|This means: To reuse code from
+4|Ah|238|examples example user User ask
+5|Ah|85|Complete System Prompt Reconst
+5|Hh|291|Artifact types: - Code: applic
+5|Ah|50|Behavioral Guidelines Note: Th
+6|Hh|407|Claude is Claude Sonnet 4.5, p
+6|Ah|344|Always use past chats tools wh
+6|Hh|108|If initial search returns limi
+6|Ah|372|If a user wants more than 20 r
+6|Hh|938|Find the link to the chat Acti
+6|Ah|1298|IMPORTANT: Before building a f
+6|Hh|509|Citing is attributing informat
+6|Ah|615|Response: Several natural appr
+6|Hh|384|This iteration of Claude is Cl
+7|Hh|158|- EVERY specific claim in the
+7|Ah|135|Search result sentence: The mo
+7|Hh|578|Example 4: No past conversatio
+7|Ah|359|It is recommended that Claude
+7|Hh|165|Every file the user uploads is
+7|Am|130|Examples of when Claude should
+7|Hh|497|This is very important otherwi
+7|Ah|45|IMPORTANT: This guidance appli
+7|Hh|43|- HTML, JS, and CSS should be
+7|Ah|255|- npm: Works normally, global
+7|Hh|182|In particular: - When creating
+7|Ah|68|Comprehensive document creatio
+7|Hh|353|When Claude needs to fill in a
+7|Ah|577|const response await fetch( ht
+7|Hh|239|When in doubt, or if recency c
+7|Am|45|- Search immediately for fast-
+7|Hh|169|- For simple factual queries t
+7|Ah|55|Scale tool calls to query comp
+7|Hh|126|If a task clearly needs 20 cal
+7|Ah|112|When internal tools are availa
+7|Hh|377|These queries are often indica
+7|Ah|251|Copyright compliance is NON-NE
+7|Hh|57|- If asked about fair use, Cla
+7|Ah|1171|IMPORTANT: Removing quotation
+7|Hh|1569|- Claude is not a lawyer so ca
+7|Hh|157|Supported path types: - Direct
+8|Ah|36|Claude is currently operating
+8|Hh|90|Claude: immediately calls the
+8|Ah|44|CLAUDE'S WORK: - Location: /ho
+8|Hh|217|Use the present files tool to
+8|Ah|607|Use this skill whenever the us
+8|Hh|714|In extreme cases of abusive or
+8|Ah|1129|To use MCP servers in your API
+8|Hh|632|-- If the claim is supported b
+8|Ah|59|Scale tool calls to query comp
+8|Hh|743|If a task clearly needs 20 cal
+8|Ah|216|- QUOTATION RULE: Every direct
+8|Hh|897|Only one quote from this sourc
+8|Ah|615|USE THIS TOOL WHEN: For bounde
+8|Hh|192|Latitude coordinate of the loc
+8|Am|42|Maximum number of results for
+8|Hh|59|Optional latitude coordinate t
+8|Ah|541|Use places search tool first t
+9|Ah|105|Claude has the web search tool
+9|Hh|90|This iteration of Claude is Cl
+9|Ah|175|Claude defaults to helping. Cl
+9|Hh|484|As another example, Claude sho
+9|Ah|150|When a request contains a pers
+9|Hh|175|Claude's reliable knowledge cu
+9|Ah|1088|Storage API Usage Examples awa
+9|Hh|31|CLAUDE'S WORK: - Location: /ho
+9|Ah|308|When placed in /mnt/user-data/
+9|Hm|68|- Claude should use markdown f
+9|Ah|969|- Papaparse: for processing CS
+9|Hh|51|The web search tool uses a sea
+9|Ah|460|- Paraphrasing-first. Claude a
+9|Hh|85|More than one small quotes cou
+9|Ah|1466|- Claude NEVER reproduces or q
+9|Hh|164|- Claude evaluates the query's
+9|Ah|39|Every query deserves a substan
+9|Hh|199|- Generally, Claude believes w
+9|Ah|322|Core principle: Would images e
+9|Hh|71|- Content from or related to s
+9|Ah|860|- Sexual or suggestive content
+9|Hh|38|Use when users want to create
+9|Ah|383|...thinking about results Pres
+9|Hh|156|Use this tool whenever you nee
+9|Ah|202|scores returns recent results,
+9|Hh|277|Weight: g, kg, oz, lb. Volume:
+9|Ah|251|When copying from view output,
+9|Hh|124|You can optionally specify a v
+9|Ah|477|Search the web Returns require
+10|Hh|223|You are an expert designer wor
+10|Ah|109|Your workflow 1. Understand us
+10|Hh|52|Reading documents You are nati
+10|Ah|187|Output creation guidelines - G
+10|Hh|153|This makes it easy for users t
+10|Ah|600|- Emoji usage: only if design
+10|Hh|78|Notes for creating prototypes
+10|Ah|144|In head, add: script type appl
+10|Hh|438|Follow this general design pro
+10|Ah|514|If you do not have an icon, as
+10|Hh|294|Asking questions In most cases
+10|Ah|1456|Are you interested in novel so
+10|Ah|496|When designing something outsi
+10|Hh|52|- If asked about whether your
+10|Ah|76|- Never produce long summaries
+10|Hh|389|- If you aren't confident abou
+10|Ah|262|Default: 0 File path relative
+10|Hh|71|Regex pattern to search for De
+10|Ah|63|Omit to inherit from src (same
+10|Hh|86|Each old string must appear ex
+10|Ah|1470|Each file becomes a version of
+10|Ah|426|Runs a synthetic DOM capture p
+10|Hh|42|Path relative to project root
+10|Ah|69|Display label for the download
+10|Hh|36|Path to the file, relative to
+10|Ah|36|Call it early to lay out your
+10|Hh|49|Because this tool is just for
+10|Ah|779|Returns the skill's full promp
+10|Hh|471|The web search tool searches t
+10|Ah|51|For analysis of source, use on
+10|Hh|161|- Never reproduce copyrighted
+11|Hh|164|Claude Fable 5 System Prompt T
+11|Ah|555|When giving protective or educ
+11|Hh|128|The long conversation reminder
+11|Ah|108|Claude avoids being heavy-hand
+11|Hh|86|If the person becomes abusive
+11|Ah|785|For events or news that may po
+11|Hh|30|Anthropic has compiled a set o
+11|Ah|105|These encode hard-won trial-an
+11|Hh|122|For instance: User: Make me a
+11|Ah|467|Claude: immediately calls view
+11|Hh|55|- Use the computer: user uploa
+11|Ah|91|LONG ( 100 lines): build itera
+11|Hh|99|Good file sharing examples: Cl
+11|Ah|1245|Use artifacts for: - Custom co
+11|Hh|159|Example user: Who is the curre
+11|Ah|879|This tool displays interactive
+11|Hm|69|examples : example.com , docs.
+11|Ah|375|Make sure it's very clearly sp
+12|Ah|173|The currently selected version
+12|Hh|169|Claude is also accessible via
+12|Ah|30|For example, for new launches,
+12|Hh|304|Anthropic doesn't display ads
+12|Ah|32|This approach involves activel
+12|Hh|277|Claude never curses unless the
+12|Ah|1574|You have a persistent memory f
+12|Ah|1612|level of detail, what to skip.
+12|Ah|1502|there and retry in the same tu
+12|Ah|694|Details about people other tha
+12|Hh|262|It's possible for the presence
+12|Ah|1332|The following examples demonst
+12|Ah|1494|- A non- third party mcp app t
+12|Ah|1014|Copyright compliance is NON-NE
+12|Hh|33|You can invoke functions by wr
+12|Ah|434|model: claude-sonnet-4-6 , //
+12|Hh|76|Allowed Domains: api.anthropic
+12|Ah|1292|Even for questions that might
+12|Ah|1456|Recommend 1-3 Claude apps or e
+13|Hh|53|Claude should never use antml:
+13|Ah|1644|Claude does not provide synthe
+13|Ah|1591|(food, hobbies, commute style)
+13|Ah|1567|- Suicide, self-harm, and diso
+13|Ah|1543|- Claude should call search pl
+13|Ah|1281|rationale CORRECT: The respons
+13|Hh|620|Required. The data of one or m
+13|Ah|1603|Show 2 3 products side-by-side
+13|Ah|1575|Show a paged product carousel
+13|Ah|246|Show a translation card when t
+14|Ah|467|Some tools are deferred and no
+14|Hh|60|Features that can be turned on
+14|Ah|170|user Draw the cover of 'The Ve
+14|Hh|42|user write a 1 minute toast fo
+14|Ah|254|If she isn't pregnant, she may
+14|Hh|728|Claude also does not help a pe
+14|Ah|1660|When providing resources, Clau
+14|Ah|1688|Claude asks one short question
+14|Ah|1635|SendUserFile puts a file into
+14|Ah|1692|WebSearch and WebFetch are the
+14|Ah|1627|reachable right now or not yet
+14|Ah|1582|isn't a fact about them: a run
+14|Ah|890|Generic technical questions ge
+14|Hh|71|If omitted, uses the agent def
+14|Ah|1652|Claude uses it when a page wou
+14|Ah|1650|- list : returns the person's
+14|Ah|1426|Only with type url and no file
+14|Hh|213|Claude omits url . Any file pa
+14|Ah|95|Once in plan mode, use this to
+14|Hh|93|Free-text notes the user added
+14|Ah|224|Examples: Auth method , Librar
+14|Hh|61|- IMPORTANT: Avoid using this
+14|Ah|298|- timeout is in milliseconds:
+14|Hh|34|The absolute path to the file
+14|Ah|1609|Read the notifications queued
+14|Ah|851|The message for the user. Supp
+14|Hm|72|- Create tasks with clear, spe
+14|Ah|240|Mark tasks as resolved: - When
+14|Hh|141|Make sure to read a task's lat
+14|Ah|74|Deferred tools appear by name
+14|Hh|704|Result format: each matched to
+14|Ah|72|Maintain the user's verbatim p
+14|Hh|125|It can be as long as needed to
+14|Ah|1547|Also topic. name , refusal. co
+14|Ah|1114|When set, only scheduled tasks

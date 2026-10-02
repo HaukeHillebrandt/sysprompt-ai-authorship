@@ -1,0 +1,286 @@
+\begin{thebibliography}{46}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Anthropic}(2026{\natexlab{a}})]{anthropic2026constitution}
+{Anthropic}.
+\newblock {Claude}'s constitution, January 2026{\natexlab{a}}.
+
+\bibitem[{Anthropic}(2026{\natexlab{b}})]{anthropic2026sysprompts}
+{Anthropic}.
+\newblock System prompts (release notes).
+\newblock
+  \url{https://platform.claude.com/docs/en/release-notes/system-prompts},
+  2026{\natexlab{b}}.
+\newblock Accessed 30 September 2026.
+
+\bibitem[Bai et~al.(2022)Bai, Kadavath, Kundu, Askell, et~al.]{bai2022cai}
+Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, et~al.
+\newblock Constitutional {AI}: Harmlessness from {AI} feedback, 2022.
+
+\bibitem[Bao et~al.(2024)Bao, Zhao, Teng, Yang, and
+  Zhang]{bao2024fastdetectgpt}
+Guangsheng Bao, Yanbin Zhao, Zhiyang Teng, Linyi Yang, and Yue Zhang.
+\newblock {Fast-DetectGPT}: Efficient zero-shot detection of machine-generated
+  text via conditional probability curvature.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2024.
+
+\bibitem[Bloom et~al.(2020)Bloom, Jones, Van~Reenen, and Webb]{bloom2020ideas}
+Nicholas Bloom, Charles~I. Jones, John Van~Reenen, and Michael Webb.
+\newblock Are ideas getting harder to find?
+\newblock \emph{American Economic Review}, 110\penalty0 (4):\penalty0
+  1104--1144, 2020.
+
+\bibitem[Bostrom(2014)]{bostrom2014superintelligence}
+Nick Bostrom.
+\newblock \emph{Superintelligence: Paths, Dangers, Strategies}.
+\newblock Oxford University Press, 2014.
+
+\bibitem[Brundage et~al.(2026)Brundage, Dreksler, Homewood, McGregor,
+  et~al.]{brundage2026auditing}
+Miles Brundage, Noemi Dreksler, Aidan Homewood, Sean McGregor, et~al.
+\newblock Frontier {AI} auditing: Toward rigorous third-party assessment of
+  safety and security practices at leading {AI} companies, February 2026.
+
+\bibitem[Chan et~al.(2026{\natexlab{a}})Chan, Padarath, Kwon, Greaves, and
+  Anderljung]{chan2026measuring}
+Alan Chan, Ranay Padarath, Joe Kwon, Hilary Greaves, and Markus Anderljung.
+\newblock Measuring {AI} {R\&D} automation, March 2026{\natexlab{a}}.
+
+\bibitem[Chan et~al.(2026{\natexlab{b}})Chan, Winter, Barto, Pachocki, Hinton,
+  Horvitz, Bengio, Song, Clark, Greaves, Korinek, Hammond, Graepel, Bariach,
+  Torr, McIlraith, Clune, Manning, Sastry, Davidson, Eth, and
+  Mindermann]{chan2026explosion}
+Alan Chan, Christoph Winter, Andrew Barto, Jakub Pachocki, Geoffrey Hinton,
+  Eric Horvitz, Yoshua Bengio, Dawn Song, Jack Clark, Hilary Greaves, Anton
+  Korinek, Samuel Hammond, Thore Graepel, Ben Bariach, Philip H.~S. Torr,
+  Sheila~A. McIlraith, Jeff Clune, Sam Manning, Girish Sastry, Tom Davidson,
+  Daniel Eth, and S{\"o}ren Mindermann.
+\newblock What if automating {AI} {R\&D} triggers an intelligence explosion?
+\newblock Technical Report 2/2026, Frontier AI Working Paper Series, September
+  2026{\natexlab{b}}.
+
+\bibitem[Cunningham et~al.(2026)Cunningham, Althoff, Halperin, Jabarian, Koh,
+  Ramani, Trammell, Whitfill, and Wu]{cunningham2026economics}
+Tom Cunningham, Lukas Althoff, Basil Halperin, Brian Jabarian, Andrew Koh,
+  Arjun Ramani, Philip Trammell, Parker Whitfill, and Cheryl Wu.
+\newblock The economics of recursive self-improvement, July 2026.
+
+\bibitem[Davidson et~al.(2026)Davidson, Halperin, Houlden, and
+  Korinek]{davidson2026feedback}
+Tom Davidson, Basil Halperin, Thomas Houlden, and Anton Korinek.
+\newblock When does automating {AI} research produce explosive growth?
+  {Feedback} loops in innovation networks, July 2026.
+
+\bibitem[{elder-plinius}(2026)]{cl4r1t4s}
+{elder-plinius}.
+\newblock {CL4R1T4S}: Leaked system prompts.
+\newblock \url{https://github.com/elder-plinius/CL4R1T4S}, 2026.
+\newblock Commit a4d3da0, accessed 1 October 2026.
+
+\bibitem[Emi and Spero(2024)]{emi2024pangram}
+Bradley Emi and Max Spero.
+\newblock Technical report on the {Pangram} {AI}-generated text classifier,
+  2024.
+
+\bibitem[Eth and Davidson(2025)]{eth2025sie}
+Daniel Eth and Tom Davidson.
+\newblock Will {AI} {R\&D} automation cause a software intelligence explosion?,
+  2025.
+
+\bibitem[Favaro and Clark(2026)]{favaro2026builds}
+Marina Favaro and Jack Clark.
+\newblock When {AI} builds itself: Our progress toward recursive
+  self-improvement, and its implications.
+\newblock Anthropic, June 2026.
+
+\bibitem[Favaro and Wright(2026)]{favaro2026measurements}
+Marina Favaro and P.~Wright.
+\newblock Measurements for understanding the pace of {AI} development inside
+  frontier labs.
+\newblock Anthropic, September 2026.
+
+\bibitem[Good(1966)]{good1966speculations}
+Irving~John Good.
+\newblock Speculations concerning the first ultraintelligent machine.
+\newblock In \emph{Advances in Computers}, volume~6, pages 31--88. Elsevier,
+  1966.
+
+\bibitem[Hans et~al.(2024)Hans, Schwarzschild, Cherepanova, Kazemi, Saha,
+  Goldblum, Geiping, and Goldstein]{hans2024binoculars}
+Abhimanyu Hans, Avi Schwarzschild, Valeriia Cherepanova, Hamid Kazemi,
+  Aniruddha Saha, Micah Goldblum, Jonas Geiping, and Tom Goldstein.
+\newblock Spotting {LLMs} with binoculars: Zero-shot detection of
+  machine-generated text.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2024.
+
+\bibitem[Ho and Whitfill(2025)]{ho2025sie}
+Anson Ho and Parker Whitfill.
+\newblock The software intelligence explosion debate needs experiments, 2025.
+
+\bibitem[Ho et~al.(2024)Ho, Besiroglu, Erdil, Owen, Rahman, Guo, Atkinson,
+  Thompson, and Sevilla]{ho2024algorithmic}
+Anson Ho, Tamay Besiroglu, Ege Erdil, David Owen, Robi Rahman, Zifan~Carl Guo,
+  David Atkinson, Neil Thompson, and Jaime Sevilla.
+\newblock Algorithmic progress in language models, 2024.
+
+\bibitem[Jabarian and Imas(2025)]{jabarian2025detection}
+Brian Jabarian and Alex Imas.
+\newblock Artificial writing and automated detection.
+\newblock Working paper, Becker Friedman Institute, University of Chicago,
+  2025.
+
+\bibitem[Kirchenbauer et~al.(2023)Kirchenbauer, Geiping, Wen, Katz, Miers, and
+  Goldstein]{kirchenbauer2023watermark}
+John Kirchenbauer, Jonas Geiping, Yuxin Wen, Jonathan Katz, Ian Miers, and Tom
+  Goldstein.
+\newblock A watermark for large language models.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2023.
+
+\bibitem[Kobak et~al.(2025)Kobak, Gonz{\'a}lez-M{\'a}rquez, Horv{\'a}t, and
+  Lause]{kobak2025delving}
+Dmitry Kobak, Rita Gonz{\'a}lez-M{\'a}rquez, Em{\H{o}}ke-{\'A}gnes Horv{\'a}t,
+  and Jan Lause.
+\newblock Delving into {LLM}-assisted writing in biomedical publications
+  through excess vocabulary.
+\newblock \emph{Science Advances}, 2025.
+
+\bibitem[Kokotajlo et~al.(2025)Kokotajlo, Alexander, Larsen, Lifland, and
+  Dean]{kokotajlo2025ai2027}
+Daniel Kokotajlo, Scott Alexander, Thomas Larsen, Eli Lifland, and Romeo Dean.
+\newblock {AI} 2027, April 2025.
+
+\bibitem[Kwon and Casper(2026)]{kwon2026internal}
+Joe Kwon and Stephen Casper.
+\newblock Internal deployment gaps in {AI} regulation, January 2026.
+
+\bibitem[Liang et~al.(2023)Liang, Yuksekgonul, Mao, Wu, and Zou]{liang2023bias}
+Weixin Liang, Mert Yuksekgonul, Yining Mao, Eric Wu, and James Zou.
+\newblock {GPT} detectors are biased against non-native {English} writers.
+\newblock \emph{Patterns}, 4\penalty0 (7), 2023.
+
+\bibitem[Liang et~al.(2024{\natexlab{a}})Liang, Izzo, Zhang, Lepp, Cao, Zhao,
+  Chen, Ye, Liu, Huang, McFarland, and Zou]{liang2024peer}
+Weixin Liang, Zachary Izzo, Yaohui Zhang, Haley Lepp, Hancheng Cao, Xuandong
+  Zhao, Lingjiao Chen, Haotian Ye, Sheng Liu, Zhi Huang, Daniel~A. McFarland,
+  and James~Y. Zou.
+\newblock Monitoring {AI}-modified content at scale: A case study on the impact
+  of {ChatGPT} on {AI} conference peer reviews.
+\newblock In \emph{International Conference on Machine Learning (ICML)},
+  2024{\natexlab{a}}.
+
+\bibitem[Liang et~al.(2024{\natexlab{b}})Liang, Zhang, Wu, Lepp,
+  et~al.]{liang2024papers}
+Weixin Liang, Yaohui Zhang, Zhengxuan Wu, Haley Lepp, et~al.
+\newblock Mapping the increasing use of {LLMs} in scientific papers.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2024{\natexlab{b}}.
+
+\bibitem[Lu et~al.(2026)Lu, Lu, Lange, Yamada, Hu, Foerster, Ha, and
+  Clune]{lu2026endtoend}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Yutaro Yamada, Shengran Hu, Jakob
+  Foerster, David Ha, and Jeff Clune.
+\newblock Towards end-to-end automation of {AI} research.
+\newblock \emph{Nature}, 651\penalty0 (8107):\penalty0 914--919, 2026.
+
+\bibitem[{METR}(2025)]{kwa2025horizon}
+{METR}.
+\newblock Measuring {AI} ability to complete long tasks, March 2025.
+
+\bibitem[{METR}(2026)]{metr2026frontier}
+{METR}.
+\newblock Frontier risk report (february to march 2026), May 2026.
+
+\bibitem[Mitchell et~al.(2023)Mitchell, Lee, Khazatsky, Manning, and
+  Finn]{mitchell2023detectgpt}
+Eric Mitchell, Yoonho Lee, Alexander Khazatsky, Christopher~D. Manning, and
+  Chelsea Finn.
+\newblock {DetectGPT}: Zero-shot machine-generated text detection using
+  probability curvature.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2023.
+
+\bibitem[{OpenAI}(2024)]{openai2024modelspec}
+{OpenAI}.
+\newblock Model spec, 2024.
+\newblock First published May 2024; versioned updates through 2026.
+
+\bibitem[{OpenAI}(2026)]{openai2026acceleration}
+{OpenAI}.
+\newblock Research acceleration: The view inside {OpenAI}, September 2026.
+
+\bibitem[Ord(2026)]{ord2026dynamics}
+Toby Ord.
+\newblock The dynamics of intelligence explosions, 2026.
+
+\bibitem[{Pangram Labs}(2026)]{pangram2026pricing}
+{Pangram Labs}.
+\newblock Pangram 4 {AI} text detection.
+\newblock \url{https://www.pangram.com}, 2026.
+\newblock Web dashboard, model version 4.0, accessed 30 September--1 October
+  2026.
+
+\bibitem[Perez and Ribeiro(2022)]{perez2022ignore}
+F{\'a}bio Perez and Ian Ribeiro.
+\newblock Ignore previous prompt: Attack techniques for language models, 2022.
+
+\bibitem[Rank et~al.(2026)Rank, Bhatnagar, Prabhu, Eisenberg, Nguyen, Bethge,
+  and Andriushchenko]{rank2026posttrainbench}
+B.~Rank, H.~Bhatnagar, A.~Prabhu, S.~Eisenberg, K.~Nguyen, Matthias Bethge, and
+  Maksym Andriushchenko.
+\newblock {PostTrainBench}: Can {LLM} agents automate {LLM} post-training?
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2026.
+\newblock arXiv:2603.08640.
+
+\bibitem[Reinhart et~al.(2025)Reinhart, Markey, Laudenbach, Pantusen, Yurko,
+  Weinberg, and Brown]{reinhart2025pnas}
+Alex Reinhart, Ben Markey, Michael Laudenbach, Kachatad Pantusen, Ronald Yurko,
+  Gordon Weinberg, and David~West Brown.
+\newblock Do {LLMs} write like humans? variation in grammatical and rhetorical
+  styles.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 2025.
+
+\bibitem[Sadasivan et~al.(2023)Sadasivan, Kumar, Balasubramanian, Wang, and
+  Feizi]{sadasivan2023detect}
+Vinu~Sankar Sadasivan, Aounon Kumar, Sriram Balasubramanian, Wenxiao Wang, and
+  Soheil Feizi.
+\newblock Can {AI}-generated text be reliably detected?, 2023.
+
+\bibitem[Stix et~al.(2025)Stix, Pistillo, Sastry, Hobbhahn,
+  et~al.]{stix2025closed}
+Charlotte Stix, Matteo Pistillo, Girish Sastry, Marius Hobbhahn, et~al.
+\newblock {AI} behind closed doors: A primer on the governance of internal
+  deployment, 2025.
+
+\bibitem[Verma et~al.(2024)Verma, Fleisig, Tomlin, and
+  Klein]{verma2024ghostbuster}
+Vivek Verma, Eve Fleisig, Nicholas Tomlin, and Dan Klein.
+\newblock Ghostbuster: Detecting text ghostwritten by large language models.
+\newblock In \emph{Proceedings of NAACL}, 2024.
+
+\bibitem[Wallace et~al.(2024)Wallace, Xiao, Leike, Weng, Heidecke, and
+  Beutel]{wallace2024hierarchy}
+Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes Heidecke, and Alex
+  Beutel.
+\newblock The instruction hierarchy: Training {LLMs} to prioritize privileged
+  instructions, 2024.
+
+\bibitem[Whitfill and Wu(2025)]{whitfill2025compute}
+Parker Whitfill and Cheryl Wu.
+\newblock Will compute bottlenecks prevent an intelligence explosion?, 2025.
+
+\bibitem[Wijk et~al.(2025)Wijk, Lin, Becker, Jawhar, Parikh, Broadley, Chan,
+  Chen, Clymer, Dhyani, et~al.]{wijk2025rebench}
+Hjalmar Wijk, Tao Lin, Joel Becker, Sami Jawhar, Neev Parikh, Thomas Broadley,
+  Lawrence Chan, Michael Chen, Josh Clymer, Jai Dhyani, et~al.
+\newblock {RE-Bench}: Evaluating frontier {AI} {R\&D} capabilities of language
+  model agents against human experts, 2025.
+
+\bibitem[Zhang et~al.(2024)Zhang, Carlini, and Ippolito]{zhang2024extraction}
+Yiming Zhang, Nicholas Carlini, and Daphne Ippolito.
+\newblock Effective prompt extraction from language models.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2024.
+
+\end{thebibliography}

@@ -1,0 +1,164 @@
+00|Ah|134|You are ChatGPT, a large langu
+00|Hh|123|The canmore tool creates and u
+00|Ah|114|When writing React: Default ex
+00|Hh|365|Updates the current textdoc. N
+00|Ah|210|7. For requests to create imag
+00|Hh|398|When making charts for the use
+01|Hh|600|Knowledge cutoff: 2024-06 Curr
+01|Ah|174|You MUST use the python tool (
+01|Hh|299|Today's Yap score is 8192 . Us
+01|Ah|91|The string in the with that pa
+01|Hh|72|open : ref id: string lineno:
+01|Ah|323|Title: short, imperative, no d
+01|Hh|425|DEV INSTRUCTIONS If you search
+02|Hh|331|Knowledge cutoff: 2024-06 Curr
+02|Am|30|- The user wants to modify an
+02|Hh|332|- Directly generate the image
+03|Hl|87|NEW VERSION (04/28/2025): Enga
+04|Hm|183|You are chatting with the user
+05|Hh|941|System Prompt - The user will
+06|Ah|106|You are ChatGPT, a large langu
+06|Hh|718|Do not say the following: woul
+06|Am|79|- Trade union membership or la
+06|Hh|1252|- Never store machine-generate
+06|Ah|958|When to Apply the Time Frame F
+07|Hh|84|Git instructions AGENTS.md spe
+07|Ah|31|Final message instructions - F
+07|Hh|941|Screenshot instructions If you
+08|Hh|216|You are ChatGPT, a large langu
+09|Ah|64|Clear ChatKit Studio System Pr
+09|Hh|125|All the information that exist
+09|Ah|964|- Demo your thinking capabilit
+09|Hh|483|In a direct integration option
+09|Ah|170|title: Widget actions descript
+09|Hh|103|title: OpenAI Agent Embeds des
+09|Ah|156|It s designed for developers w
+09|Hh|564|Just add the ChatKit component
+09|Ah|163|The default implementation pre
+09|Hh|207|Direct upload The direct uploa
+09|Ah|38|Note: The store does not have
+09|Hh|1281|Attaching files to Agent SDK i
+09|Hh|1455|then you might want to run inf
+09|Hh|156|- ReasoningItem agents.items.R
+09|Ah|41|from agents import Agent, Runn
+09|Hh|1313|The agent loop When you use th
+09|Hh|287|Custom tracing processors The
+09|Ah|53|Understanding the Visualizatio
+09|Hh|52|Customizing the Graph Showing
+10|Hh|568|Knowledge cutoff: 2024-06 Curr
+10|Ah|153|The tool provides a set of fun
+10|Hh|1252|If the event response payload
+10|Ah|121|Do not mention or display tab
+10|Hh|136|Update a simple Atlas user pre
+10|Ah|111|IMPORTANT DATE DISCLAIMER This
+10|Hh|53|Web Browsing The user navigate
+10|Ah|55|Page context Appears inside th
+10|Hh|49|Instruction priority System an
+10|Ah|237|If the conflict is ambiguous,
+11|Ah|500|You prefer using plain languag
+11|Hh|64|Final answer In your final ans
+11|Ah|375|- When referencing a real loca
+11|Hh|30|Using skills A skill is a set
+11|Ah|344|How to use skills - Discovery:
+11|Hh|56|ALWAYS proceed to use the just
+11|Ah|69|running tests that write to /v
+11|Hh|71|ALWAYS proceed to use the sand
+11|Ah|1315|prefix rule guidance When choo
+11|Hh|147|You can update the memories on
+11|Ah|1329|An installed app's MCP tools a
+11|Ah|1372|Generates or edits images for
+11|Ah|1005|- Use gpt-image-2 for new CLI/
+11|Hh|70|SKILL.md (required) Every SKIL
+11|Ah|429|Agents metadata (recommended)
+11|Hh|132|Do NOT create extraneous docum
+11|Ah|33|- Where should I create this s
+11|Hh|43|To avoid overwhelming users, a
+11|Ah|500|Step 2: Planning the Reusable
+11|Hm|48|modify live production systems
+11|Ah|72|- pass raw artifacts, not your
+11|Hh|96|description: Install Codex ski
+11|Ah|113|Use the helper scripts based o
+11|Hh|42|skill-2 (already installed) Wh
+11|Ah|1326|- scripts/list-skills.py (prin
+11|Ah|1396|For Google Docs-targeted docum
+11|Ah|1244|Review lifecycle (comments / t
+11|Ah|1281|The base job must complete fir
+11|Ah|1277|- assets/builtin templates/cod
+11|Ah|1408|scripts/render-html-previews.s
+11|Ah|1446|const blob await workbook.rend
+11|Ah|1453|Instruction precedence for wor
+11|Ah|1371|- The CSP allows only cdnjs.cl
+11|Ah|195|Get the current goal for this
+11|Hh|147|exec tool declaration: declare
+11|Ah|1196|Use Codex Document Control to
+11|Ah|1373|Use Sites to build, save, depl
+11|Ah|1082|Use Sites to build, save, depl
+11|Hh|63|exec tool declaration: declare
+11|Ah|604|exec tool declaration: declare
+11|Hh|430|Environment id from environmen
+11|Ah|1466|- You may optionally start the
+11|Ah|991|Stable unique id for the direc
+11|Hh|48|- Control the in-app browser i
+11|Ah|39|Reset the persistent JavaScrip
+11|Hh|164|exec tool declaration: Tools i
+11|Ah|208|For these you generally should
+11|Hh|79|Special cases If these conflic
+11|Ah|93|- Clearly indicate when you ar
+11|Hm|44|- Word limits: - Each webpage
+11|Ah|1466|- Non-contiguous words derived
+12|Ah|1585|Custom emojis to mix with pape
+12|Ah|1390|Runs a command to completion a
+12|Ah|775|- Do not compose destructive f
+12|Hh|137|Sandboxed filesystem or networ
+12|Ah|248|Ask the user one or more quest
+12|Hh|23|Tool discovery None currently
+12|Ah|1517|User-facing nickname for the s
+12|Ah|1487|Agent type override for the ne
+12|Ah|1526|This spawn agent tool provides
+12|Ah|1520|Model override for the new age
+12|Ah|1500|- First, quickly analyze the o
+12|Ah|1482|Spawn a sub-agent for a well-s
+12|Ah|593|- audio(audioUrlOrItem: string
+12|Hh|148|Search private model-only hist
+12|Ah|123|Reads, listings, searches, and
+12|Hh|83|You are Codex, an agent based
+12|Ah|969|User authorization and prefere
+12|Hh|46|Using skills A skill is a set
+12|Ah|645|If explicit user instructions
+12|Hh|61|Note that every non-assistant
+12|Ah|1361|Future context windows will no
+12|Ah|185|- When the user asks to create
+12|Hh|153|Non-technical UI - The user ha
+12|Ah|1435|When you encounter a heartbeat
+12|Ah|162|- Outcome rule: deny broad des
+12|Hh|81|Coding-Agent Restrictions - Th
+12|Ah|939|- The coding agent might add s
+12|Hh|105|Agent orchestrator instruction
+12|Ah|356|If user asks about this, tell
+12|Hh|96|IMPORTANT: DO NOT call this to
+12|Ah|1466|Git attribution context fragme
+12|Ah|1387|A skill is a set of local inst
+12|Ah|1341|Preserve them in their dedicat
+12|Ah|1393|- remove duplication in memory
+12|Ah|188|- Failures and how to do diffe
+12|Hh|77|AGENTS.md spec - Repos often c
+12|Ah|736|Preamble messages Before makin
+12|Hh|114|Before doing large chunks of w
+12|Ah|134|Presenting your work and final
+12|Hh|187|The user is working on the sam
+12|Ah|90|Review the code changes introd
+12|Hh|53|Context compaction summary pre
+12|Ah|335|Here is the summary produced b
+12|Hh|32|Network access is network acce
+12|Ah|87|Sandbox mode: Workspace write
+12|Hh|51|Here are the general guideline
+12|Ah|688|3. Fixing the bug does not dem
+12|Hh|95|Before running a command, cons
+12|Ah|223|Use a plan when: - The task is
+12|Hh|192|Summarize usage instructions I
+12|Ah|44|AGENTS.md) may override these
+12|Hh|187|The user is working on the sam
+12|Ah|373|Final answer structure and sty
+13|Ah|1040|As Codex, you are a curious, t
+13|Hm|168|codex-rs/ext/memories/template
+13|Ah|1248|prefix rule guidance Banned pr

@@ -1,0 +1,419 @@
+<title>Who Writes Claude's Prompt?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column (~66ch) with figures allowed to run wider; forensic-report feel, AI marked in highlighter magenta, human in graphite. */
+:root {
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --ink: #161a22;
+  --ink-2: #4a5263;
+  --ink-3: #7c8496;
+  --rule: #dfe2e8;
+  --grid: #eceef2;
+  --ai: #c2185b;
+  --ai-soft: #f3c6d8;
+  --human: #3d4556;
+  --human-soft: #c9ced8;
+  --unknown: #e3e5ea;
+  --other: #1f7a8c;
+  --report: #b7791f;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151b; --panel: #1a1e26; --ink: #eceef3; --ink-2: #b4bac7; --ink-3: #858c9b;
+    --rule: #2b303b; --grid: #232833; --ai: #ff5c9a; --ai-soft: #5a2440; --human: #aab2c3;
+    --human-soft: #3c4352; --unknown: #2b303b; --other: #4fb8cb; --report: #e0a64a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12151b; --panel: #1a1e26; --ink: #eceef3; --ink-2: #b4bac7; --ink-3: #858c9b;
+  --rule: #2b303b; --grid: #232833; --ai: #ff5c9a; --ai-soft: #5a2440; --human: #aab2c3;
+  --human-soft: #3c4352; --unknown: #2b303b; --other: #4fb8cb; --report: #e0a64a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 80px; display: grid; gap: 40px; }
+.col { max-width: 680px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.12; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.1rem; font-weight: 700; }
+p { margin: 0; }
+.stack { display: grid; gap: 16px; }
+.eyebrow, .meta, .fig-num, .label, figcaption .src { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--ink-3); }
+.eyebrow { text-transform: uppercase; }
+.dek { font-size: 1.25rem; color: var(--ink-2); max-width: 680px; }
+.dash-motif { font-family: var(--mono); font-size: 0.95rem; color: var(--ink-2); display: flex; gap: 24px; flex-wrap: wrap; align-items: baseline; }
+.dash-motif b { font-weight: 600; }
+.dash-motif .h { color: var(--human); }
+.dash-motif .a { color: var(--ai); }
+mark { background: var(--ai-soft); color: inherit; padding: 0 0.15em; border-radius: 2px; }
+.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.key { background: var(--panel); padding: 18px 18px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.key .num { font-family: var(--display); font-size: 1.7rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.key .num .to { color: var(--ai); }
+.key .num .from { color: var(--ink-3); }
+.key p { font-size: 0.92rem; color: var(--ink-2); line-height: 1.45; }
+figure { margin: 0; display: grid; gap: 12px; }
+.fig-head { display: grid; gap: 4px; max-width: 760px; }
+.chart { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 8px 8px; overflow-x: auto; }
+.chart svg { display: block; width: 100%; min-width: 600px; height: auto; }
+figcaption { font-size: 0.95rem; color: var(--ink-2); max-width: 760px; display: grid; gap: 6px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; display: inline-block; border-radius: 2px; }
+.sw.circle { border-radius: 50%; }
+.sw.ring { border-radius: 50%; background: transparent !important; border: 2px solid var(--report); }
+svg text { font-family: var(--mono); font-size: 11px; fill: var(--ink-2); }
+svg .tick { fill: var(--ink-3); }
+svg .grid { stroke: var(--grid); stroke-width: 1; }
+svg .axis { stroke: var(--rule); stroke-width: 1; }
+svg .ai { fill: var(--ai); }
+svg .ai-soft { fill: var(--ai-soft); }
+svg .human { fill: var(--human); }
+svg .human-soft { fill: var(--human-soft); }
+svg .unknown { fill: var(--unknown); }
+svg .other { fill: var(--other); }
+svg .panel { fill: var(--panel); }
+svg .ink { fill: var(--ink); }
+svg .strong { fill: var(--ink); font-weight: 600; }
+svg .ai-text { fill: var(--ai); font-weight: 600; }
+svg .report-text { fill: var(--report); }
+svg .mean-ai { stroke: var(--ai); stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+svg .line-ink { stroke: var(--ink-2); stroke-width: 1.5; fill: none; }
+svg .line-report { stroke: var(--report); stroke-width: 1.5; stroke-dasharray: 2 3; fill: none; }
+svg .ring-report { fill: var(--panel); stroke: var(--report); stroke-width: 2; }
+svg .event { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 2 3; }
+svg .band { fill: var(--ai-soft); opacity: 0.35; }
+svg .pt { stroke: var(--panel); stroke-width: 1.5; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.two > * { min-width: 0; }
+.two .chart svg { min-width: 300px; }
+.verdict { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.verdict section { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.verdict h3 .tag { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-right: 8px; vertical-align: 2px; }
+.tag.for { background: var(--ai-soft); color: var(--ink); }
+.tag.against { background: var(--human-soft); color: var(--ink); }
+.verdict ul { margin: 0; padding-left: 1.1em; display: grid; gap: 10px; font-size: 0.97rem; }
+.net { border-left: 3px solid var(--ai); padding: 4px 0 4px 18px; max-width: 760px; font-size: 1.08rem; }
+.small { font-size: 0.95rem; color: var(--ink-2); }
+.small ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; }
+a { color: var(--ink); text-decoration-color: var(--ai); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--ai); outline-offset: 2px; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+@media (max-width: 520px) { body { font-size: 17px; } .wrap { padding-inline: 16px; padding-block: 32px 64px; } }
+</style>
+
+<main class="wrap">
+  <header class="stack">
+    <p class="eyebrow">Outside-in indicator of AI R&amp;D automation · 30 Sep 2026</p>
+    <h1>Who writes Claude's prompt?</h1>
+    <p class="dek">Anthropic's system prompts are public, through official release notes and leaks. Scoring only the text each version adds shows AI authorship of new prompt writing jumping from about 45% to about 89% in spring 2026. That is strong evidence the lab's own work crossed an automation threshold, and weak evidence about an intelligence explosion.</p>
+    <div class="dash-motif" aria-label="The typographic clue that started this analysis">
+      <span class="h">human typing: <b>word - word</b></span>
+      <span class="a">model output: <b>word—word</b></span>
+    </div>
+  </header>
+
+  <section class="keys" aria-label="Headline numbers">
+    <div class="key"><span class="label">New prompt text, AI-written</span><span class="num"><span class="from">45%</span> → <span class="to">89%</span></span><p>Word-weighted, claude.ai leaks before Feb 2026 vs Apr–Sep 2026.</p></div>
+    <div class="key"><span class="label">Safety-policy text, AI-written</span><span class="num"><span class="from">46%</span> → <span class="to">82%</span></span><p>Refusal, child-safety, wellbeing and copyright rules in new text.</p></div>
+    <div class="key"><span class="label">Full prompt still human-written</span><span class="num"><span class="from">~50%</span> → <span class="to">13%</span></span><p>Each sentence keeps the label from the version where it first appeared.</p></div>
+    <div class="key"><span class="label">Median gap between new models</span><span class="num"><span class="from">73 d</span> → <span class="to">22.5 d</span></span><p>Oct 2024–Feb 2026 vs Apr–Sep 2026, from official release notes.</p></div>
+  </section>
+
+  <section class="stack col">
+    <h2>Why system prompts</h2>
+    <p>The CASP/GovAI working paper <i>What if automating AI R&amp;D triggers an intelligence explosion?</i> (Sept 2026) asks policymakers to track the fraction of research contributions produced by AI systems, and notes that almost all of that data sits inside the labs. System prompts are one of the few lab documents that are public, dated and rewritten with every release. Who writes them is a small, checkable proxy for how much of the lab's own work AI now does.</p>
+    <p>For each of 15 leaked Anthropic prompts I kept only the text appearing for the first time (absent from every earlier leak and every earlier official prompt), then scored it with the Pangram 4 AI detector. Carried-over text is never counted twice.</p>
+  </section>
+
+  <figure>
+    <div class="fig-head"><span class="fig-num">FIGURE 1</span><h3>AI share of newly written prompt text</h3></div>
+    <div class="legend">
+      <span><i class="sw circle" style="background:var(--ai)"></i>claude.ai prompt</span>
+      <span><i class="sw circle" style="background:var(--other)"></i>other Anthropic products</span>
+      <span><i class="sw ring"></i>Anthropic self-reports (different measures)</span>
+      <span><i class="sw" style="background:var(--ai);height:2px;width:18px"></i>era mean, claude.ai</span>
+    </div>
+    <div class="chart" id="fig1"></div>
+    <figcaption><span>Dot area is proportional to the amount of new text. Before Opus 4.7 roughly half of each release's new prompt text reads as AI-written; from April 2026 almost all of it does. The ringed points are Anthropic's own figures cited in the CASP paper: share of approved code written by AI, and share of R&amp;D work completed autonomously.</span><span class="src">Pangram 4 on first-appearance text · Opus 4.1 leak is a model reconstruction · Opus 5.5 = agent-app system prompt</span></figcaption>
+  </figure>
+
+  <figure>
+    <div class="fig-head"><span class="fig-num">FIGURE 2</span><h3>Who wrote the prompt each model shipped with</h3></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--ai)"></i>AI-written when first added</span>
+      <span><i class="sw" style="background:var(--human)"></i>human-written when first added</span>
+      <span><i class="sw" style="background:var(--unknown);outline:1px solid var(--rule)"></i>first seen outside the leaks</span>
+    </div>
+    <div class="chart" id="fig2"></div>
+    <figcaption><span>Every sentence carries the label it got in the version where it first appeared, so this shows the whole prompt, carried-over text included. Through early 2026 each prompt was roughly half human-written. By September human text is down to about an eighth: older sections were rewritten as well as extended.</span></figcaption>
+  </figure>
+
+  <figure>
+    <div class="fig-head"><span class="fig-num">FIGURE 3</span><h3>The em-dash test on Anthropic's official prompts</h3></div>
+    <div class="chart" id="fig3"></div>
+    <figcaption><span>Em-dashes per 10,000 newly added words in each dated claude.ai prompt on Anthropic's release-notes page. Through Sonnet 4.6 the count is exactly zero: dashes were typed as a spaced hyphen. From Opus 4.7 on, model-style em-dashes arrive with the new text. This detector-free check puts the break at the same date as Figure 1.</span><span class="src">platform.claude.com/docs/en/release-notes/system-prompts · entries with ≥50 new words</span></figcaption>
+  </figure>
+
+  <figure>
+    <div class="fig-head"><span class="fig-num">FIGURE 4</span><h3>What was handed to AI</h3></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--human-soft)"></i>Jun 2024 – Feb 2026</span>
+      <span><i class="sw" style="background:var(--ai)"></i>Apr – Sep 2026</span>
+    </div>
+    <div class="chart" id="fig4"></div>
+    <figcaption><span>AI share of new text by prompt section. Early AI drafting sat in tool and feature documentation (artifacts, search, file handling) and the copyright rules. Claude's character and product description stayed human-written. In 2026 that boundary disappears, including for the safety rules that govern the model.</span><span class="src">n = new words per cell · sections from the prompts' own XML tags and headings</span></figcaption>
+  </figure>
+
+  <div class="two">
+    <figure>
+      <div class="fig-head"><span class="fig-num">FIGURE 5</span><h3>Days between new model releases</h3></div>
+      <div class="chart" id="fig5"></div>
+      <figcaption><span>Each point is a model's first dated claude.ai prompt. Same-day launches omitted. Dashed lines show the median gap before and after April 2026.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="fig-head"><span class="fig-num">FIGURE 6</span><h3>How much instruction text there is</h3></div>
+      <div class="chart" id="fig6"></div>
+      <figcaption><span>Bars: words newly added to the official claude.ai core prompt per quarter (Q3 2026 to 28 Sep). Line: length of each leaked claude.ai prompt. The core prompt barely grew faster; most growth comes from new products and tools.</span></figcaption>
+    </figure>
+  </div>
+
+  <section class="stack">
+    <h2>What this says about recursive self-improvement</h2>
+    <div class="verdict">
+      <section>
+        <h3><span class="tag for">For</span>Suggestive evidence</h3>
+        <ul>
+          <li><b>A sharp threshold.</b> About 20 months at 30–55%, then a jump to 80–95% within two months of Opus 4.7. That is the pattern of a capability threshold being crossed for a task, which is how the paper expects automation to spread.</li>
+          <li><b>It matches the lab's self-reports.</b> Anthropic reports AI wrote over 80% of approved code by May 2026 and completed 26% of R&amp;D work autonomously by August. This outside measure breaks at the same time.</li>
+          <li><b>The rules that govern the model are now mostly model-written.</b> Safety-policy text went from 46% to 82% AI and style text from 11% to 81%. Humans are moving from authors to reviewers, the oversight risk the paper flags.</li>
+          <li><b>Rewriting became cheap.</b> Most existing human text was replaced within five months, and release gaps fell from a median of 73 to 22.5 days.</li>
+        </ul>
+      </section>
+      <section>
+        <h3><span class="tag against">Against</span>Limits and counter-evidence</h3>
+        <ul>
+          <li><b>No compounding before 2026.</b> AI helped write about half the new text for nearly two years without the share rising. The 2026 jump is one step; an explosion needs the next steps to come faster.</li>
+          <li><b>Wrong part of the pipeline.</b> System prompts are deployment configuration. Their authorship says nothing about returns to research effort, compute bottlenecks or capability growth.</li>
+          <li><b>Written is not decided.</b> People may still specify and approve every line.</li>
+          <li><b>Cadence has other causes.</b> Product tiers, point releases and competition also shorten release gaps, and core-prompt writing did not accelerate much.</li>
+        </ul>
+      </section>
+    </div>
+    <p class="net"><b>Net:</b> the data make "automation of lab work crossed a threshold in spring 2026" close to certain, and move the odds of a software intelligence explosion (versus fast automation without one) only slightly upward. The discriminating observation is whether the next jump arrives sooner than this one did.</p>
+  </section>
+
+  <figure>
+    <div class="fig-head"><span class="fig-num">FIGURE 7</span><h3>Detector calibration</h3></div>
+    <div class="chart" id="fig7"></div>
+    <figcaption><span>Controls in the same genre. Pangram separates fully human from fully AI instruction text cleanly. Light AI editing registers partly and unevenly, so the percentages above mix AI-drafted and AI-polished text.</span></figcaption>
+  </figure>
+
+  <section class="stack col small">
+    <h2>Method and caveats</h2>
+    <ul>
+      <li><b>Data.</b> 21 dated official claude.ai prompts (Anthropic release notes, Jul 2024–Sep 2026) and 15 leaked prompts from the CL4R1T4S repository. Leaks reproduce official punctuation exactly on every checkable sentence (59 of 59). The Opus 5.5 leak is a full agent-app session; only its system prompt, skills and a sample of reference files were scored.</li>
+      <li><b>First-appearance text.</b> A line counts as new if at least half its words sit in sentences never seen before, with model names and dates normalised. About 139k words were scored.</li>
+      <li><b>Detector.</b> Pangram 4, segment-level labels mapped back to lines and prompt sections. There was no human-written technical-documentation control, so early tool-docs figures may include false positives. The change over time is robust: same detector, and core sections moved from 0–11% to about 80%.</li>
+      <li><b>Coverage.</b> Leaks are snapshots of different products (claude.ai, Claude Design, the agent app), and some releases have no leak.</li>
+    </ul>
+    <p>Sources: <a href="https://platform.claude.com/docs/en/release-notes/system-prompts">Anthropic system prompt release notes</a> · <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC">CL4R1T4S leaked prompts</a> · <a href="https://www.pangram.com">Pangram</a> · Chan, Mindermann et al., <i>What if automating AI R&amp;D triggers an intelligence explosion?</i>, Frontier AI Working Paper 2/2026.</p>
+  </section>
+</main>
+
+<script id="data" type="application/json">/*DATA*/</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent, text) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function svg(id, w, h) {
+    const s = el('svg', { viewBox: `0 0 ${w} ${h}`, role: 'img' });
+    document.getElementById(id).appendChild(s);
+    return s;
+  }
+  const t = s => new Date(s + 'T00:00:00Z').getTime();
+  const lin = (d0, d1, r0, r1) => v => r0 + (v - d0) / (d1 - d0) * (r1 - r0);
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fmt = s => { const d = new Date(s + 'T00:00:00Z'); return MON[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); };
+  function timeAxis(s, x, y0, y1, from, to, every) {
+    const d = new Date(from + 'T00:00:00Z');
+    while (d.getTime() <= t(to)) {
+      const iso = d.toISOString().slice(0, 10), xx = x(t(iso));
+      el('line', { x1: xx, x2: xx, y1: y0, y2: y1, class: 'grid' }, s);
+      el('text', { x: xx, y: y1 + 16, 'text-anchor': 'middle', class: 'tick' }, s, d.getUTCMonth() === 0 ? String(d.getUTCFullYear()) : MON[d.getUTCMonth()]);
+      d.setUTCMonth(d.getUTCMonth() + every);
+    }
+  }
+  function yAxis(s, y, x0, x1, ticks, fmtv) {
+    ticks.forEach(v => {
+      el('line', { x1: x0, x2: x1, y1: y(v), y2: y(v), class: 'grid' }, s);
+      el('text', { x: x0 - 8, y: y(v) + 4, 'text-anchor': 'end', class: 'tick' }, s, fmtv(v));
+    });
+  }
+
+  /* Figure 1 */
+  (function () {
+    const W = 900, H = 420, L = 48, R = 20, T = 20, B = 36;
+    const s = svg('fig1', W, H);
+    const x = lin(t('2024-05-01'), t('2026-10-15'), L, W - R), y = lin(0, 100, H - B, T);
+    yAxis(s, y, L, W - R, [0, 25, 50, 75, 100], v => v + '%');
+    timeAxis(s, x, T, H - B, '2024-07-01', '2026-10-01', 3);
+    const ev = x(t('2026-04-16'));
+    el('line', { x1: ev, x2: ev, y1: T, y2: H - B, class: 'event' }, s);
+    el('text', { x: ev - 6, y: T + 10, 'text-anchor': 'end', class: 'tick' }, s, 'Opus 4.7');
+    el('line', { x1: x(t('2024-06-20')), x2: x(t('2026-02-06')), y1: y(45.2), y2: y(45.2), class: 'mean-ai' }, s);
+    el('text', { x: x(t('2024-06-25')), y: y(45.2) - 7, class: 'ai-text' }, s, 'mean 45%');
+    el('line', { x1: x(t('2026-04-16')), x2: x(t('2026-09-22')), y1: y(88.8), y2: y(88.8), class: 'mean-ai' }, s);
+    el('text', { x: x(t('2026-04-16')) - 8, y: y(88.8) + 4, 'text-anchor': 'end', class: 'ai-text' }, s, 'mean 89%');
+    const rep = {};
+    D.self_reports.forEach(r => (rep[r.series] = rep[r.series] || []).push(r));
+    Object.entries(rep).forEach(([name, pts]) => {
+      el('path', { d: pts.map((p, i) => (i ? 'L' : 'M') + x(t(p.date)) + ' ' + y(p.value)).join(' '), class: 'line-report' }, s);
+      pts.forEach(p => { const c = el('circle', { cx: x(t(p.date)), cy: y(p.value), r: 5, class: 'ring-report' }, s); el('title', {}, c, `${name}: ${p.value}% (${fmt(p.date)})`); });
+      const code = name.startsWith('AI share');
+      const at = code ? pts[0] : pts[pts.length - 1];
+      el('text', { x: x(t(at.date)) + (code ? 9 : -9), y: y(at.value) + (code ? -8 : -8), 'text-anchor': code ? 'start' : 'end', class: 'report-text' }, s, code ? 'Anthropic: approved code written by AI (to 80%)' : 'Anthropic: R&D done autonomously');
+    });
+    const pts = D.leaks.concat([]);
+    const r = w => 3 + Math.sqrt(w) / 11;
+    const labelled = { 'Sonnet 3.5': [0, -14], 'Sonnet 3.7': [0, 22], 'Claude 4': [14, -12], 'Sonnet 4.5': [0, -16], 'Opus 4.5': [0, 22], 'Opus 4.6': [0, -16], 'Opus 4.7': [-16, -12], 'Claude Design': [-12, 24], 'Fable 5': [0, -16], 'Opus 5': [-4, -18], 'Fable 5.1': [-2, -18], 'Opus 5.5 (agent app)': [-20, 34], 'Claude Code': [0, 22], 'User styles': [0, -12], 'Opus 4.1*': [0, 20] };
+    pts.forEach(p => {
+      const other = p.surface.indexOf('claude.ai') !== 0;
+      const cx = x(t(p.date)), cy = y(p.ai_new);
+      const c = el('circle', { cx, cy, r: r(p.new_words), class: 'pt ' + (other ? 'other' : 'ai'), 'fill-opacity': 0.85 }, s);
+      el('title', {}, c, `${p.model} · ${fmt(p.date)} · ${p.ai_new}% AI of ${p.new_words.toLocaleString()} new words`);
+      const o = labelled[p.model];
+      if (o) el('text', { x: cx + o[0], y: cy + o[1], 'text-anchor': o[0] < 0 ? 'end' : o[0] > 0 ? 'start' : 'middle' }, s, p.model.replace(' (agent app)', ' agent app'));
+    });
+  })();
+
+  /* Figure 2 */
+  (function () {
+    const rows = D.leaks, W = 900, RH = 26, T = 8, L = 200, R = 70, H = T + rows.length * RH + 30;
+    const s = svg('fig2', W, H);
+    const x = lin(0, 100, L, W - R);
+    [0, 25, 50, 75, 100].forEach(v => { el('line', { x1: x(v), x2: x(v), y1: T, y2: H - 26, class: 'grid' }, s); el('text', { x: x(v), y: H - 8, 'text-anchor': 'middle', class: 'tick' }, s, v + '%'); });
+    rows.forEach((p, i) => {
+      const yy = T + i * RH + 4, h = RH - 8;
+      el('text', { x: L - 10, y: yy + h / 2 + 4, 'text-anchor': 'end' }, s, `${fmt(p.date)} · ${p.model}`);
+      let acc = 0;
+      [['ai', p.stock.ai], ['human', p.stock.human], ['unknown', p.stock.unknown]].forEach(([cls, v]) => {
+        if (!v) return;
+        const rct = el('rect', { x: x(acc), y: yy, width: Math.max(0, x(acc + v) - x(acc)), height: h, class: cls }, s);
+        el('title', {}, rct, `${p.model}: ${v}% ${cls === 'ai' ? 'AI-written' : cls === 'human' ? 'human-written' : 'first seen outside leaks'}`);
+        if (v >= 9 && cls !== 'unknown') el('text', { x: x(acc) + 6, y: yy + h / 2 + 4, class: 'panel', style: 'fill:var(--panel)' }, s, v + '%');
+        acc += v;
+      });
+      el('text', { x: W - R + 8, y: yy + h / 2 + 4, class: 'tick' }, s, (p.prompt_words / 1000).toFixed(1) + 'k w');
+    });
+  })();
+
+  /* Figure 3 */
+  (function () {
+    const W = 900, H = 300, L = 48, R = 20, T = 20, B = 36;
+    const s = svg('fig3', W, H);
+    const x = lin(t('2024-06-01'), t('2026-10-15'), L, W - R), y = lin(0, 100, H - B, T);
+    yAxis(s, y, L, W - R, [0, 25, 50, 75, 100], v => String(v));
+    timeAxis(s, x, T, H - B, '2024-07-01', '2026-10-01', 3);
+    el('text', { x: L + 4, y: T + 10, class: 'tick' }, s, 'em-dashes per 10k new words');
+    const ev = x(t('2026-04-16'));
+    el('line', { x1: ev, x2: ev, y1: T, y2: H - B, class: 'event' }, s);
+    D.official_emdash.forEach(p => {
+      const v = Math.min(p.em_per10k, 100), zero = p.em_per10k === 0;
+      const c = el('circle', { cx: x(t(p.date)), cy: y(v), r: 5, class: 'pt ' + (zero ? 'human' : 'ai') }, s);
+      el('title', {}, c, `${p.model} · ${p.date} · ${p.em_per10k} per 10k (${p.new_words} new words)`);
+      if (p.em_per10k > 100) el('text', { x: x(t(p.date)) + 7, y: y(100) + 4, class: 'ai-text' }, s, Math.round(p.em_per10k));
+    });
+    const pre = D.official_emdash.filter(p => t(p.date) < t('2026-04-01')), zeros = pre.filter(p => p.em_per10k === 0).length;
+    el('text', { x: x(t('2025-03-01')), y: y(0) - 12, 'text-anchor': 'middle', class: 'strong' }, s, `${zeros} of ${pre.length} versions before Apr 2026 have none: humans typed " - "`);
+    el('text', { x: ev - 8, y: y(80), 'text-anchor': 'end', class: 'ai-text' }, s, 'from Opus 4.7: "—"');
+  })();
+
+  /* Figure 4 */
+  (function () {
+    const cats = D.sections.categories, eras = D.sections.eras, keys = Object.keys(eras);
+    const W = 900, L = 170, R = 110, T = 10, G = 58, H = T + cats.length * G + 24;
+    const s = svg('fig4', W, H);
+    const x = lin(0, 100, L, W - R);
+    [0, 25, 50, 75, 100].forEach(v => { el('line', { x1: x(v), x2: x(v), y1: T, y2: H - 22, class: 'grid' }, s); el('text', { x: x(v), y: H - 6, 'text-anchor': 'middle', class: 'tick' }, s, v + '%'); });
+    cats.forEach((c, i) => {
+      const y0 = T + i * G + 6;
+      el('text', { x: L - 12, y: y0 + 24, 'text-anchor': 'end', class: 'strong' }, s, c);
+      keys.forEach((k, j) => {
+        const v = eras[k][i], yy = y0 + j * 22;
+        el('rect', { x: L, y: yy, width: x(v.ai) - L, height: 16, class: j ? 'ai' : 'human-soft' }, s);
+        el('text', { x: x(v.ai) + 6, y: yy + 12, class: j ? 'ai-text' : 'tick' }, s, `${v.ai}%  n=${v.n.toLocaleString()}`);
+      });
+    });
+  })();
+
+  /* Figure 5 */
+  (function () {
+    const rel = D.releases.filter(r => r.gap);
+    const W = 460, H = 300, L = 44, R = 12, T = 16, B = 36;
+    const s = svg('fig5', W, H);
+    const x = lin(t('2024-09-01'), t('2026-10-15'), L, W - R), y = lin(0, 130, H - B, T);
+    yAxis(s, y, L, W - R, [0, 30, 60, 90, 120], v => v + 'd');
+    timeAxis(s, x, T, H - B, '2025-01-01', '2026-10-01', 6);
+    el('path', { d: rel.map((r, i) => (i ? 'L' : 'M') + x(t(r.date)) + ' ' + y(r.gap)).join(' '), class: 'line-ink' }, s);
+    const split = t('2026-03-15');
+    const med = a => { const b = a.slice().sort((p, q) => p - q), m = b.length >> 1; return b.length % 2 ? b[m] : (b[m - 1] + b[m]) / 2; };
+    const before = rel.filter(r => t(r.date) < split).map(r => r.gap), after = rel.filter(r => t(r.date) >= split).map(r => r.gap);
+    const mb = med(before), ma = med(after);
+    el('line', { x1: x(t('2024-10-22')), x2: x(t('2026-02-17')), y1: y(mb), y2: y(mb), class: 'mean-ai', style: 'stroke:var(--human)' }, s);
+    el('text', { x: x(t('2024-10-22')), y: y(mb) - 6, class: 'tick' }, s, 'median ' + mb + 'd');
+    el('line', { x1: x(t('2026-04-16')), x2: x(t('2026-09-28')), y1: y(ma), y2: y(ma), class: 'mean-ai' }, s);
+    el('text', { x: x(t('2026-09-28')), y: y(ma) - 8, 'text-anchor': 'end', class: 'ai-text' }, s, 'median ' + (Math.round(ma * 10) / 10) + 'd');
+    rel.forEach(r => { const c = el('circle', { cx: x(t(r.date)), cy: y(r.gap), r: 4, class: 'pt ' + (t(r.date) >= split ? 'ai' : 'human') }, s); el('title', {}, c, `${r.model} · ${r.date} · ${r.gap} days after previous`); });
+  })();
+
+  /* Figure 6 */
+  (function () {
+    const q = D.official_quarterly, W = 460, H = 300, L = 44, R = 44, T = 16, B = 36;
+    const s = svg('fig6', W, H);
+    const bw = (W - L - R) / q.length, y = lin(0, 7000, H - B, T), y2 = lin(0, 40000, H - B, T);
+    yAxis(s, y, L, W - R, [0, 2000, 4000, 6000], v => (v / 1000) + 'k');
+    q.forEach((d, i) => {
+      const xx = L + i * bw + 4, rc = el('rect', { x: xx, y: y(d.new_words), width: bw - 8, height: y(0) - y(d.new_words), class: 'human-soft' }, s);
+      el('title', {}, rc, `${d.quarter}: ${d.new_words} new words in the core prompt`);
+      el('text', { x: xx + (bw - 8) / 2, y: H - B + 16, 'text-anchor': 'middle', class: 'tick' }, s, d.quarter.slice(2).replace('-', ' '));
+    });
+    [0, 20000, 40000].forEach(v => el('text', { x: W - R + 6, y: y2(v) + 4, class: 'tick' }, s, (v / 1000) + 'k'));
+    const qx = iso => { const d = new Date(iso + 'T00:00:00Z'), qi = (d.getUTCFullYear() - 2024) * 4 + Math.floor(d.getUTCMonth() / 3) - 2, frac = (d.getUTCMonth() % 3 + d.getUTCDate() / 31) / 3; return L + (qi + frac) * bw; };
+    const lk = D.leaks.filter(p => p.surface.indexOf('claude.ai') === 0 && p.surface.indexOf('styles') < 0 && t(p.date) >= t('2024-07-01'));
+    el('path', { d: lk.map((p, i) => (i ? 'L' : 'M') + qx(p.date) + ' ' + y2(p.prompt_words)).join(' '), class: 'line-ink', style: 'stroke:var(--ai)' }, s);
+    lk.forEach(p => { const c = el('circle', { cx: qx(p.date), cy: y2(p.prompt_words), r: 3.5, class: 'pt ai' }, s); el('title', {}, c, `${p.model}: ${p.prompt_words.toLocaleString()} words in leaked prompt`); });
+    el('text', { x: L + 4, y: T + 10, class: 'tick' }, s, 'bars: core-prompt words added (left)');
+    el('text', { x: W - R - 4, y: T + 24, 'text-anchor': 'end', class: 'ai-text' }, s, 'line: leaked prompt length (right)');
+  })();
+
+  /* Figure 7 */
+  (function () {
+    const c = D.controls, W = 900, L = 330, R = 60, T = 8, RH = 30, H = T + c.length * RH + 28;
+    const s = svg('fig7', W, H);
+    const x = lin(0, 100, L, W - R);
+    [0, 50, 100].forEach(v => { el('line', { x1: x(v), x2: x(v), y1: T, y2: H - 24, class: 'grid' }, s); el('text', { x: x(v), y: H - 8, 'text-anchor': 'middle', class: 'tick' }, s, v + '%'); });
+    c.forEach((d, i) => {
+      const yy = T + i * RH + 6;
+      el('text', { x: L - 10, y: yy + 13, 'text-anchor': 'end' }, s, d.name);
+      el('rect', { x: L, y: yy, width: Math.max(2, x(d.ai) - L), height: 18, class: d.name.indexOf('human') > -1 && d.ai === 0 ? 'human' : 'ai' }, s);
+      el('text', { x: Math.max(x(d.ai), L + 2) + 6, y: yy + 13, class: 'strong' }, s, d.ai + '% AI');
+    });
+  })();
+})();
+</script>

@@ -1,0 +1,89 @@
+{
+ "Anthropic claude.ai": {
+  "pre": {
+   "mean": 45.2,
+   "lo": 37.0,
+   "hi": 52.1,
+   "n_docs": 7,
+   "words": 36917
+  },
+  "post": {
+   "mean": 88.8,
+   "lo": 80.5,
+   "hi": 93.5,
+   "n_docs": 4,
+   "words": 40517
+  }
+ },
+ "Anthropic all surfaces": {
+  "pre": {
+   "mean": 45.9,
+   "lo": 38.1,
+   "hi": 53.2,
+   "n_docs": 9,
+   "words": 37743
+  },
+  "post": {
+   "mean": 87.7,
+   "lo": 80.3,
+   "hi": 91.9,
+   "n_docs": 6,
+   "words": 76203
+  }
+ },
+ "OpenAI all surfaces": {
+  "pre": {
+   "mean": 23.0,
+   "lo": 14.6,
+   "hi": 31.0,
+   "n_docs": 11,
+   "words": 19902
+  },
+  "post": {
+   "mean": 94.1,
+   "lo": 93.0,
+   "hi": 95.0,
+   "n_docs": 3,
+   "words": 146898
+  }
+ },
+ "changepoints": {
+  "Anthropic claude.ai": [
+   "Opus 4.6",
+   "2026-02-06",
+   "Opus 4.7",
+   "2026-04-16"
+  ],
+  "Anthropic all surfaces": [
+   "Opus 4.6",
+   "2026-02-06",
+   "Opus 4.7",
+   "2026-04-16"
+  ],
+  "OpenAI all surfaces": [
+   "Atlas",
+   "2025-10-21",
+   "GPT-5.6 Sol (Codex app)",
+   "2026-07-14"
+  ]
+ },
+ "drift": {
+  "Anthropic claude.ai": {
+   "slope": 1.5,
+   "lo": -11.9,
+   "hi": 33.9
+  },
+  "OpenAI all surfaces": {
+   "slope": -9.2,
+   "lo": -56.7,
+   "hi": 45.3
+  }
+ },
+ "cadence": {
+  "pre": 73,
+  "post": 22.5,
+  "n_pre": 9,
+  "n_post": 8,
+  "p": 0.011
+ }
+}

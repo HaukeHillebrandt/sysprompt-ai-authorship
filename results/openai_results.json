@@ -1,0 +1,310 @@
+{
+ "docs": [
+  {
+   "key": "00_GPT_4.5",
+   "model": "GPT-4.5",
+   "date": "2025-02-27",
+   "surface": "ChatGPT",
+   "new_words": 1298,
+   "scored_words": 1298,
+   "ai_new": 35
+  },
+  {
+   "key": "01_o3_o4_mini",
+   "model": "o3 / o4-mini",
+   "date": "2025-04-16",
+   "surface": "ChatGPT",
+   "new_words": 1900,
+   "scored_words": 1900,
+   "ai_new": 31
+  },
+  {
+   "key": "02_GPT_4o_Apr",
+   "model": "GPT-4o (Apr)",
+   "date": "2025-04-25",
+   "surface": "ChatGPT",
+   "new_words": 679,
+   "scored_words": 679,
+   "ai_new": 5
+  },
+  {
+   "key": "03_Personality_v2",
+   "model": "Personality v2",
+   "date": "2025-04-28",
+   "surface": "ChatGPT",
+   "new_words": 82,
+   "scored_words": 82,
+   "ai_new": 0
+  },
+  {
+   "key": "04_GPT_4.1",
+   "model": "GPT-4.1",
+   "date": "2025-05-15",
+   "surface": "ChatGPT",
+   "new_words": 176,
+   "scored_words": 176,
+   "ai_new": 0
+  },
+  {
+   "key": "05_Codex_cloud",
+   "model": "Codex (cloud)",
+   "date": "2025-05-27",
+   "surface": "Codex",
+   "new_words": 951,
+   "scored_words": 951,
+   "ai_new": 0
+  },
+  {
+   "key": "06_GPT_5",
+   "model": "GPT-5",
+   "date": "2025-08-07",
+   "surface": "ChatGPT",
+   "new_words": 3103,
+   "scored_words": 3103,
+   "ai_new": 40
+  },
+  {
+   "key": "07_Codex_Sep",
+   "model": "Codex (Sep)",
+   "date": "2025-09-15",
+   "surface": "Codex",
+   "new_words": 1051,
+   "scored_words": 1051,
+   "ai_new": 3
+  },
+  {
+   "key": "08_GPT_4o_Sep",
+   "model": "GPT-4o (Sep)",
+   "date": "2025-09-27",
+   "surface": "ChatGPT",
+   "new_words": 217,
+   "scored_words": 217,
+   "ai_new": 0
+  },
+  {
+   "key": "09_ChatKit_Studio",
+   "model": "ChatKit Studio",
+   "date": "2025-10-06",
+   "surface": "ChatKit Studio",
+   "new_words": 7796,
+   "scored_words": 7796,
+   "ai_new": 20
+  },
+  {
+   "key": "10_Atlas",
+   "model": "Atlas",
+   "date": "2025-10-21",
+   "surface": "Atlas browser",
+   "new_words": 2649,
+   "scored_words": 2649,
+   "ai_new": 25
+  },
+  {
+   "key": "11_GPT_5.6_Sol_Codex_app",
+   "model": "GPT-5.6 Sol (Codex app)",
+   "date": "2026-07-14",
+   "surface": "Codex Desktop",
+   "new_words": 62114,
+   "scored_words": 62114,
+   "ai_new": 93
+  },
+  {
+   "key": "12_GPT_6_Astra_Codex_app",
+   "model": "GPT-6 Astra (Codex app)",
+   "date": "2026-09-09",
+   "surface": "Codex Desktop",
+   "new_words": 81741,
+   "scored_words": 56173,
+   "ai_new": 95
+  },
+  {
+   "key": "13_GPT_6_Sol_Codex_app",
+   "model": "GPT-6 Sol (Codex app)",
+   "date": "2026-09-22",
+   "surface": "Codex Desktop",
+   "new_words": 3043,
+   "scored_words": 3043,
+   "ai_new": 94
+  }
+ ],
+ "sections": {
+  "2025": [
+   {
+    "ai": 29,
+    "n": 528
+   },
+   {
+    "ai": 49,
+    "n": 156
+   },
+   {
+    "ai": 28,
+    "n": 561
+   },
+   {
+    "ai": 21,
+    "n": 18177
+   }
+  ],
+  "2026": [
+   {
+    "ai": 96,
+    "n": 8001
+   },
+   {
+    "ai": 50,
+    "n": 16
+   },
+   {
+    "ai": 95,
+    "n": 7946
+   },
+   {
+    "ai": 92,
+    "n": 102111
+   }
+  ]
+ },
+ "stock": [
+  {
+   "key": "00_GPT_4.5",
+   "words": 1271,
+   "ai": 34,
+   "human": 66,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 34,
+   "unscored": 0
+  },
+  {
+   "key": "01_o3_o4_mini",
+   "words": 1955,
+   "ai": 33,
+   "human": 66,
+   "ai_est": 0,
+   "human_est": 1,
+   "ai_total": 33,
+   "unscored": 1
+  },
+  {
+   "key": "02_GPT_4o_Apr",
+   "words": 1246,
+   "ai": 15,
+   "human": 85,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 15,
+   "unscored": 0
+  },
+  {
+   "key": "03_Personality_v2",
+   "words": 183,
+   "ai": 0,
+   "human": 100,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 0,
+   "unscored": 0
+  },
+  {
+   "key": "04_GPT_4.1",
+   "words": 1326,
+   "ai": 12,
+   "human": 87,
+   "ai_est": 0,
+   "human_est": 1,
+   "ai_total": 12,
+   "unscored": 1
+  },
+  {
+   "key": "05_Codex_cloud",
+   "words": 948,
+   "ai": 1,
+   "human": 99,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 1,
+   "unscored": 0
+  },
+  {
+   "key": "06_GPT_5",
+   "words": 3831,
+   "ai": 31,
+   "human": 69,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 31,
+   "unscored": 0
+  },
+  {
+   "key": "07_Codex_Sep",
+   "words": 1791,
+   "ai": 3,
+   "human": 97,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 3,
+   "unscored": 0
+  },
+  {
+   "key": "08_GPT_4o_Sep",
+   "words": 1270,
+   "ai": 20,
+   "human": 77,
+   "ai_est": 0,
+   "human_est": 3,
+   "ai_total": 20,
+   "unscored": 3
+  },
+  {
+   "key": "09_ChatKit_Studio",
+   "words": 7597,
+   "ai": 21,
+   "human": 79,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 21,
+   "unscored": 0
+  },
+  {
+   "key": "10_Atlas",
+   "words": 4808,
+   "ai": 18,
+   "human": 82,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 18,
+   "unscored": 0
+  },
+  {
+   "key": "11_GPT_5.6_Sol_Codex_app",
+   "words": 59983,
+   "ai": 93,
+   "human": 7,
+   "ai_est": 0,
+   "human_est": 0,
+   "ai_total": 93,
+   "unscored": 0
+  },
+  {
+   "key": "12_GPT_6_Astra_Codex_app",
+   "words": 115905,
+   "ai": 72,
+   "human": 17,
+   "ai_est": 10,
+   "human_est": 1,
+   "ai_total": 82,
+   "unscored": 11
+  },
+  {
+   "key": "13_GPT_6_Sol_Codex_app",
+   "words": 30075,
+   "ai": 72,
+   "human": 10,
+   "ai_est": 17,
+   "human_est": 1,
+   "ai_total": 89,
+   "unscored": 18
+  }
+ ]
+}
